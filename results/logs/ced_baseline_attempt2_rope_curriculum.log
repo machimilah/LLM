@@ -1,0 +1,6 @@
+step=500 stage=0 loss=0.7645 acc=0.1550 {'direct': 0.17, 'one_hop': 0.1525, 'two_hop': 0.1425}
+step=1000 stage=0 loss=0.6769 acc=0.1683 {'direct': 0.18, 'one_hop': 0.155, 'two_hop': 0.17}
+step=1500 stage=0 loss=0.5181 acc=0.1675 {'direct': 0.1725, 'one_hop': 0.165, 'two_hop': 0.165}
+step=2000 stage=0 loss=0.5960 acc=0.1675 {'direct': 0.18, 'one_hop': 0.1525, 'two_hop': 0.17}
+step=2500 stage=0 loss=0.7016 acc=0.1550 {'direct': 0.155, 'one_hop': 0.15, 'two_hop': 0.16}
+step=3000 stage=0 loss=0.6609 acc=0.1675 {'direct': 0.1775, 'one_hop': 0.15, 'two_hop': 0.175}

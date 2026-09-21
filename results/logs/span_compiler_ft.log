@@ -1,0 +1,16 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 3859.85it/s]
+building span-labelled documents (substituted entities, WikiText noise)...
+Repo card metadata block was not found. Setting CardData to empty.
+  entity vocabulary mined from prose: 2626 train names / 4723 train nouns, held-out halves for evaluation
+  56389 sentences, 18239 facts
+  epoch 1: loss 0.0032 (1638s)
+  epoch 2: loss 0.0002 (5539s)
+evaluating on real BABILong (original_entities)...
+  qa1: retention 82.0% (gold 100.0%) | P 99.2 R 86.2 | notes 21/485 tok (4.4%)
+  qa2: retention 73.0% (gold 100.0%) | P 99.4 R 89.0 | notes 55/495 tok (11.1%)
+  qa9: retention 82.0% (gold 100.0%) | P 97.7 R 84.8 | notes 25/479 tok (5.2%)
+evaluating on real BABILong (heldout_entities)...
+  qa1: retention 82.0% (gold 100.0%) | P 99.0 R 85.5 | notes 21/485 tok (4.4%)
+  qa2: retention 74.0% (gold 100.0%) | P 99.1 R 88.7 | notes 55/495 tok (11.1%)
+  qa9: retention 82.0% (gold 100.0%) | P 97.0 R 84.3 | notes 25/479 tok (5.2%)

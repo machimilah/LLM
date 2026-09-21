@@ -1,0 +1,42 @@
+# Decisive controlled comparison (plan section 14): CED vs CED + SNM.
+# SN-CED is built on a trained, healthy CED baseline checkpoint (same seed).
+base_config: ced_baseline_gen.yaml
+note_mode: note_slots   # one memory slot per note; "shared_encoder" = attempt 2
+
+train:
+  lectures_per_batch: 16
+  n_filler: 18              # training distribution, same as the baseline's final stage
+  # Stage A: encoder frozen, train the note compiler on gold chunk labels, on
+  # cached encoder states, until held-out exact extraction passes the gate.
+  # Mixed-length compiler training: each pooled lecture draws its filler count
+  # from this list, so the compiler never sees a single fixed context length.
+  compiler_train_fillers: [0, 18, 36, 54, 72]
+  compiler_pool_lectures: 1000
+  compiler_val_lectures: 100
+  compiler_batch_chunks: 512
+  compiler_lr: 0.002
+  compiler_max_steps: 6000
+  compiler_gate: 0.99
+  # Stage B: encoder + compiler frozen; fine-tune the shared decoder and the note
+  # encoder on BOTH detailed memory and predicted-note memory, so one model serves
+  # both paths. Gate: stop once gold-note validation accuracy >= decoder_gate and
+  # the detailed path stays >= 0.99 (checked every 250 steps).
+  decoder_lr: 0.0003
+  decoder_min_steps: 500
+  decoder_max_steps: 4000
+  decoder_gate: 0.97
+  decoder_val_lectures: 40
+  warmup: 100
+
+router:
+  # Calibrated in results/tables/router_calibration.md. Lecture-level routing
+  # spent ~996 memory slots to gain 1.4 points; question-level routing gains
+  # 0.6 points for 79 slots, so it is the default.
+  policy: question          # question | lecture
+  fallback_threshold: 0.5
+
+eval:
+  fillers: [18, 54, 108, 216]   # 108 and 216 are beyond every compiler training length
+  n_docs: 200
+  queries_per_type: 2
+  workload_queries_per_lecture: 36   # for per-lecture compute accounting (12 entities x 3 types)

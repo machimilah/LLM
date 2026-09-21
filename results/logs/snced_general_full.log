@@ -1,0 +1,27 @@
+device: cpu
+warm-started backbone from ced_baseline_seed2.pt (missing 0, unexpected 0)
+parameters: 145,608 (compiler 25,734, notes 99,008, router 20,866)
+step=250 stage=0 notes=0.108 routed=0.108 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=2.227 suff=2.226 n_notes=8.7 overlap=0.032
+step=500 stage=0 notes=0.436 routed=0.436 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.042 suff=0.041 n_notes=23.0 overlap=0.021
+step=544 advance to stage 1: [0, [0, 1]]
+step=699 advance to stage 2: [0, [0, 1, 2]]
+step=749 advance to stage 3: [6, [0, 1, 2]]
+step=750 stage=3 notes=0.925 routed=0.925 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.035 suff=0.034 n_notes=30.0 overlap=0.008
+step=799 advance to stage 4: [12, [0, 1, 2]]
+step=801 decoder unfrozen
+step=849 advance to stage 5: [18, [0, 1, 2]]
+step=1000 stage=5 notes=0.994 routed=0.994 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.076 suff=0.076 n_notes=41.9 overlap=0.002
+step=1250 stage=5 notes=1.000 routed=1.000 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.038 suff=0.037 n_notes=41.9 overlap=0.001
+step=1500 stage=5 notes=0.992 routed=0.992 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.003 suff=0.003 n_notes=41.8 overlap=0.001
+step=1750 stage=5 notes=0.997 routed=0.997 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.045 suff=0.045 n_notes=41.9 overlap=0.000
+step=2000 stage=5 notes=1.000 routed=1.000 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.000 suff=0.000 n_notes=41.6 overlap=0.000
+step=2250 stage=5 notes=1.000 routed=1.000 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.000 suff=0.000 n_notes=39.2 overlap=0.000
+step=2500 stage=5 notes=1.000 routed=1.000 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.000 suff=0.000 n_notes=27.3 overlap=0.000
+step=2750 stage=5 notes=1.000 routed=1.000 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.000 suff=0.000 n_notes=21.0 overlap=0.000
+step=3000 stage=5 notes=1.000 routed=1.000 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.000 suff=0.000 n_notes=18.9 overlap=0.000
+step=3250 stage=5 notes=1.000 routed=1.000 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.000 suff=0.000 n_notes=18.5 overlap=0.000
+step=3349 stage=5 notes=1.000 routed=1.000 detailed=1.000 | slots=42.0 routed_slots=42.0 fired=0.00 | L_notes=0.000 suff=0.000 n_notes=18.5 overlap=0.000
+sample notes: []
+seed=2 FINAL notes=1.0000 routed=1.0000 detailed=1.0000 slots=42.0
+warm-started backbone from ced_baseline_seed3.pt (missing 0, unexpected 0)
+parameters: 145,608 (compiler 25,734, notes 99,008, router 20,866)

@@ -1,0 +1,6 @@
+seed=1 stage A: note compiler
+  compiler step=100 loss=8.5866
+  compiler step=200 loss=5.4018
+  compiler step=300 loss=3.9738
+  compiler step=400 loss=3.3149
+  compiler step=500 loss=3.0322

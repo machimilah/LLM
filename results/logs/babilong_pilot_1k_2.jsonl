@@ -1,0 +1,375 @@
+{"task": "qa1", "i": 0, "condition": "full_context", "correct": true, "pred": "bathroom", "target": "bathroom", "prompt_tokens": 723, "build_s": 0.0, "answer_s": 2.67}
+{"task": "qa1", "i": 0, "condition": "rag_topk", "correct": true, "pred": "Bathroom", "target": "bathroom", "prompt_tokens": 227, "build_s": 0.0, "answer_s": 0.96}
+{"task": "qa1", "i": 0, "condition": "summary", "correct": false, "pred": "Mary is believed to have been buried in", "target": "bathroom", "prompt_tokens": 138, "build_s": 15.27, "answer_s": 1.44}
+{"task": "qa1", "i": 0, "condition": "snm_notes", "correct": true, "pred": "Bathroom", "target": "bathroom", "prompt_tokens": 71, "build_s": 6.34, "answer_s": 0.61}
+{"task": "qa1", "i": 0, "condition": "snm_trained", "correct": true, "pred": "Bathroom", "target": "bathroom", "prompt_tokens": 58, "build_s": 0.79, "answer_s": 0.6}
+{"task": "qa1", "i": 1, "condition": "full_context", "correct": false, "pred": "Dry Hill", "target": "kitchen", "prompt_tokens": 690, "build_s": 0.0, "answer_s": 2.18}
+{"task": "qa1", "i": 1, "condition": "rag_topk", "correct": false, "pred": "Bathroom", "target": "kitchen", "prompt_tokens": 289, "build_s": 0.0, "answer_s": 1.15}
+{"task": "qa1", "i": 1, "condition": "summary", "correct": false, "pred": "Garden", "target": "kitchen", "prompt_tokens": 170, "build_s": 19.31, "answer_s": 0.86}
+{"task": "qa1", "i": 1, "condition": "snm_notes", "correct": false, "pred": "Bathroom", "target": "kitchen", "prompt_tokens": 138, "build_s": 15.48, "answer_s": 0.77}
+{"task": "qa1", "i": 1, "condition": "snm_trained", "correct": true, "pred": "kitchen", "target": "kitchen", "prompt_tokens": 95, "build_s": 0.14, "answer_s": 0.76}
+{"task": "qa1", "i": 2, "condition": "full_context", "correct": true, "pred": "kitchen", "target": "kitchen", "prompt_tokens": 644, "build_s": 0.0, "answer_s": 2.1}
+{"task": "qa1", "i": 2, "condition": "rag_topk", "correct": true, "pred": "kitchen", "target": "kitchen", "prompt_tokens": 271, "build_s": 0.0, "answer_s": 1.3}
+{"task": "qa1", "i": 2, "condition": "summary", "correct": false, "pred": "Bunker Hill", "target": "kitchen", "prompt_tokens": 169, "build_s": 19.9, "answer_s": 1.0}
+{"task": "qa1", "i": 2, "condition": "snm_notes", "correct": true, "pred": "Mary is likely found in the kitchen or", "target": "kitchen", "prompt_tokens": 170, "build_s": 19.77, "answer_s": 1.51}
+{"task": "qa1", "i": 2, "condition": "snm_trained", "correct": true, "pred": "kitchen", "target": "kitchen", "prompt_tokens": 53, "build_s": 0.11, "answer_s": 0.67}
+{"task": "qa1", "i": 3, "condition": "full_context", "correct": false, "pred": "The answer is unspecified.", "target": "kitchen", "prompt_tokens": 735, "build_s": 0.0, "answer_s": 2.75}
+{"task": "qa1", "i": 3, "condition": "rag_topk", "correct": false, "pred": "hallway", "target": "kitchen", "prompt_tokens": 262, "build_s": 0.0, "answer_s": 1.03}
+{"task": "qa1", "i": 3, "condition": "summary", "correct": false, "pred": "Hallway", "target": "kitchen", "prompt_tokens": 170, "build_s": 20.11, "answer_s": 0.84}
+{"task": "qa1", "i": 3, "condition": "snm_notes", "correct": true, "pred": "Kitchen", "target": "kitchen", "prompt_tokens": 45, "build_s": 2.58, "answer_s": 0.44}
+{"task": "qa1", "i": 3, "condition": "snm_trained", "correct": false, "pred": "Hallway", "target": "kitchen", "prompt_tokens": 67, "build_s": 0.1, "answer_s": 0.62}
+{"task": "qa1", "i": 4, "condition": "full_context", "correct": false, "pred": "Rome", "target": "bedroom", "prompt_tokens": 732, "build_s": 0.0, "answer_s": 2.32}
+{"task": "qa1", "i": 4, "condition": "rag_topk", "correct": true, "pred": "Bedroom", "target": "bedroom", "prompt_tokens": 248, "build_s": 0.0, "answer_s": 0.99}
+{"task": "qa1", "i": 4, "condition": "summary", "correct": false, "pred": "Rome", "target": "bedroom", "prompt_tokens": 170, "build_s": 18.97, "answer_s": 0.83}
+{"task": "qa1", "i": 4, "condition": "snm_notes", "correct": false, "pred": "London", "target": "bedroom", "prompt_tokens": 68, "build_s": 5.61, "answer_s": 0.46}
+{"task": "qa1", "i": 4, "condition": "snm_trained", "correct": true, "pred": "Bedroom", "target": "bedroom", "prompt_tokens": 50, "build_s": 0.12, "answer_s": 0.58}
+{"task": "qa1", "i": 5, "condition": "full_context", "correct": true, "pred": "office", "target": "office", "prompt_tokens": 738, "build_s": 0.0, "answer_s": 2.28}
+{"task": "qa1", "i": 5, "condition": "rag_topk", "correct": true, "pred": "office", "target": "office", "prompt_tokens": 288, "build_s": 0.0, "answer_s": 0.95}
+{"task": "qa1", "i": 5, "condition": "summary", "correct": false, "pred": "Home", "target": "office", "prompt_tokens": 133, "build_s": 15.12, "answer_s": 0.63}
+{"task": "qa1", "i": 5, "condition": "snm_notes", "correct": false, "pred": "Kitchen", "target": "office", "prompt_tokens": 47, "build_s": 2.85, "answer_s": 0.44}
+{"task": "qa1", "i": 5, "condition": "snm_trained", "correct": true, "pred": "office", "target": "office", "prompt_tokens": 64, "build_s": 0.12, "answer_s": 0.47}
+{"task": "qa1", "i": 6, "condition": "full_context", "correct": false, "pred": "bedroom", "target": "garden", "prompt_tokens": 713, "build_s": 0.0, "answer_s": 2.32}
+{"task": "qa1", "i": 6, "condition": "rag_topk", "correct": false, "pred": "bedroom", "target": "garden", "prompt_tokens": 290, "build_s": 0.0, "answer_s": 1.08}
+{"task": "qa1", "i": 6, "condition": "summary", "correct": false, "pred": "bedroom", "target": "garden", "prompt_tokens": 169, "build_s": 18.86, "answer_s": 0.84}
+{"task": "qa1", "i": 6, "condition": "snm_notes", "correct": false, "pred": "Kitchen", "target": "garden", "prompt_tokens": 57, "build_s": 4.28, "answer_s": 0.46}
+{"task": "qa1", "i": 6, "condition": "snm_trained", "correct": false, "pred": "bedroom", "target": "garden", "prompt_tokens": 67, "build_s": 0.11, "answer_s": 0.6}
+{"task": "qa1", "i": 7, "condition": "full_context", "correct": true, "pred": "Bathroom", "target": "bathroom", "prompt_tokens": 739, "build_s": 0.0, "answer_s": 2.34}
+{"task": "qa1", "i": 7, "condition": "rag_topk", "correct": false, "pred": "office", "target": "bathroom", "prompt_tokens": 271, "build_s": 0.0, "answer_s": 1.13}
+{"task": "qa1", "i": 7, "condition": "summary", "correct": true, "pred": "Bathroom", "target": "bathroom", "prompt_tokens": 164, "build_s": 18.71, "answer_s": 0.84}
+{"task": "qa1", "i": 7, "condition": "snm_notes", "correct": true, "pred": "Bathroom", "target": "bathroom", "prompt_tokens": 112, "build_s": 11.99, "answer_s": 0.77}
+{"task": "qa1", "i": 7, "condition": "snm_trained", "correct": false, "pred": "Office", "target": "bathroom", "prompt_tokens": 51, "build_s": 0.15, "answer_s": 0.48}
+{"task": "qa1", "i": 8, "condition": "full_context", "correct": false, "pred": "field", "target": "kitchen", "prompt_tokens": 733, "build_s": 0.0, "answer_s": 2.26}
+{"task": "qa1", "i": 8, "condition": "rag_topk", "correct": true, "pred": "Kitchen", "target": "kitchen", "prompt_tokens": 274, "build_s": 0.0, "answer_s": 1.05}
+{"task": "qa1", "i": 8, "condition": "summary", "correct": false, "pred": "home", "target": "kitchen", "prompt_tokens": 76, "build_s": 6.92, "answer_s": 0.51}
+{"task": "qa1", "i": 8, "condition": "snm_notes", "correct": false, "pred": "Hallway", "target": "kitchen", "prompt_tokens": 53, "build_s": 3.84, "answer_s": 0.63}
+{"task": "qa1", "i": 8, "condition": "snm_trained", "correct": true, "pred": "kitchen", "target": "kitchen", "prompt_tokens": 65, "build_s": 0.18, "answer_s": 0.65}
+{"task": "qa1", "i": 9, "condition": "full_context", "correct": false, "pred": "Down town", "target": "bedroom", "prompt_tokens": 735, "build_s": 0.0, "answer_s": 2.36}
+{"task": "qa1", "i": 9, "condition": "rag_topk", "correct": true, "pred": "Bedroom", "target": "bedroom", "prompt_tokens": 290, "build_s": 0.0, "answer_s": 1.09}
+{"task": "qa1", "i": 9, "condition": "summary", "correct": false, "pred": "office", "target": "bedroom", "prompt_tokens": 83, "build_s": 8.23, "answer_s": 0.54}
+{"task": "qa1", "i": 9, "condition": "snm_notes", "correct": false, "pred": "Hallway", "target": "bedroom", "prompt_tokens": 49, "build_s": 3.16, "answer_s": 0.68}
+{"task": "qa1", "i": 9, "condition": "snm_trained", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 64, "build_s": 0.16, "answer_s": 0.63}
+{"task": "qa1", "i": 10, "condition": "full_context", "correct": false, "pred": "garden", "target": "office", "prompt_tokens": 700, "build_s": 0.0, "answer_s": 2.44}
+{"task": "qa1", "i": 10, "condition": "rag_topk", "correct": false, "pred": "hallway", "target": "office", "prompt_tokens": 283, "build_s": 0.0, "answer_s": 1.17}
+{"task": "qa1", "i": 10, "condition": "summary", "correct": false, "pred": "bedroom", "target": "office", "prompt_tokens": 169, "build_s": 19.22, "answer_s": 0.82}
+{"task": "qa1", "i": 10, "condition": "snm_notes", "correct": false, "pred": "bedroom", "target": "office", "prompt_tokens": 170, "build_s": 19.23, "answer_s": 0.82}
+{"task": "qa1", "i": 10, "condition": "snm_trained", "correct": true, "pred": "office", "target": "office", "prompt_tokens": 131, "build_s": 0.18, "answer_s": 0.61}
+{"task": "qa1", "i": 11, "condition": "full_context", "correct": false, "pred": "bedroom", "target": "office", "prompt_tokens": 691, "build_s": 0.0, "answer_s": 2.21}
+{"task": "qa1", "i": 11, "condition": "rag_topk", "correct": false, "pred": "hallway", "target": "office", "prompt_tokens": 282, "build_s": 0.0, "answer_s": 1.07}
+{"task": "qa1", "i": 11, "condition": "summary", "correct": false, "pred": "bedroom", "target": "office", "prompt_tokens": 170, "build_s": 19.29, "answer_s": 0.82}
+{"task": "qa1", "i": 11, "condition": "snm_notes", "correct": false, "pred": "Bathroom", "target": "office", "prompt_tokens": 123, "build_s": 12.95, "answer_s": 0.72}
+{"task": "qa1", "i": 11, "condition": "snm_trained", "correct": true, "pred": "office", "target": "office", "prompt_tokens": 115, "build_s": 0.2, "answer_s": 0.58}
+{"task": "qa1", "i": 12, "condition": "full_context", "correct": true, "pred": "bathroom", "target": "bathroom", "prompt_tokens": 735, "build_s": 0.0, "answer_s": 2.31}
+{"task": "qa1", "i": 12, "condition": "rag_topk", "correct": false, "pred": "office", "target": "bathroom", "prompt_tokens": 269, "build_s": 0.0, "answer_s": 0.91}
+{"task": "qa1", "i": 12, "condition": "summary", "correct": false, "pred": "bedroom", "target": "bathroom", "prompt_tokens": 146, "build_s": 16.7, "answer_s": 0.77}
+{"task": "qa1", "i": 12, "condition": "snm_notes", "correct": true, "pred": "bathroom", "target": "bathroom", "prompt_tokens": 45, "build_s": 2.59, "answer_s": 0.55}
+{"task": "qa1", "i": 12, "condition": "snm_trained", "correct": false, "pred": "bedroom", "target": "bathroom", "prompt_tokens": 83, "build_s": 0.15, "answer_s": 0.64}
+{"task": "qa1", "i": 13, "condition": "full_context", "correct": true, "pred": "Bathroom", "target": "bathroom", "prompt_tokens": 615, "build_s": 0.0, "answer_s": 2.03}
+{"task": "qa1", "i": 13, "condition": "rag_topk", "correct": false, "pred": "kitchen", "target": "bathroom", "prompt_tokens": 250, "build_s": 0.0, "answer_s": 1.02}
+{"task": "qa1", "i": 13, "condition": "summary", "correct": false, "pred": "kitchen", "target": "bathroom", "prompt_tokens": 170, "build_s": 18.81, "answer_s": 0.82}
+{"task": "qa1", "i": 13, "condition": "snm_notes", "correct": false, "pred": "Kitchen", "target": "bathroom", "prompt_tokens": 50, "build_s": 2.92, "answer_s": 0.47}
+{"task": "qa1", "i": 13, "condition": "snm_trained", "correct": false, "pred": "Kitchen", "target": "bathroom", "prompt_tokens": 56, "build_s": 0.1, "answer_s": 0.45}
+{"task": "qa1", "i": 14, "condition": "full_context", "correct": true, "pred": "bathroom", "target": "bathroom", "prompt_tokens": 710, "build_s": 0.0, "answer_s": 2.28}
+{"task": "qa1", "i": 14, "condition": "rag_topk", "correct": false, "pred": "Kitchen", "target": "bathroom", "prompt_tokens": 282, "build_s": 0.0, "answer_s": 0.93}
+{"task": "qa1", "i": 14, "condition": "summary", "correct": false, "pred": "kitchen", "target": "bathroom", "prompt_tokens": 169, "build_s": 18.96, "answer_s": 0.82}
+{"task": "qa1", "i": 14, "condition": "snm_notes", "correct": true, "pred": "bathroom", "target": "bathroom", "prompt_tokens": 59, "build_s": 4.4, "answer_s": 0.59}
+{"task": "qa1", "i": 14, "condition": "snm_trained", "correct": false, "pred": "bedroom", "target": "bathroom", "prompt_tokens": 88, "build_s": 0.16, "answer_s": 0.65}
+{"task": "qa1", "i": 15, "condition": "full_context", "correct": false, "pred": "London", "target": "hallway", "prompt_tokens": 749, "build_s": 0.0, "answer_s": 2.2}
+{"task": "qa1", "i": 15, "condition": "rag_topk", "correct": true, "pred": "hallway", "target": "hallway", "prompt_tokens": 286, "build_s": 0.0, "answer_s": 1.07}
+{"task": "qa1", "i": 15, "condition": "summary", "correct": false, "pred": "Mary is located in England.", "target": "hallway", "prompt_tokens": 134, "build_s": 14.53, "answer_s": 1.27}
+{"task": "qa1", "i": 15, "condition": "snm_notes", "correct": false, "pred": "London", "target": "hallway", "prompt_tokens": 51, "build_s": 3.41, "answer_s": 0.5}
+{"task": "qa1", "i": 15, "condition": "snm_trained", "correct": false, "pred": "office", "target": "hallway", "prompt_tokens": 53, "build_s": 0.13, "answer_s": 0.43}
+{"task": "qa1", "i": 16, "condition": "full_context", "correct": false, "pred": "Bathroom", "target": "kitchen", "prompt_tokens": 734, "build_s": 0.0, "answer_s": 2.3}
+{"task": "qa1", "i": 16, "condition": "rag_topk", "correct": true, "pred": "Kitchen", "target": "kitchen", "prompt_tokens": 292, "build_s": 0.0, "answer_s": 0.95}
+{"task": "qa1", "i": 16, "condition": "summary", "correct": true, "pred": "kitchen", "target": "kitchen", "prompt_tokens": 170, "build_s": 19.04, "answer_s": 0.82}
+{"task": "qa1", "i": 16, "condition": "snm_notes", "correct": false, "pred": "bedroom", "target": "kitchen", "prompt_tokens": 76, "build_s": 6.66, "answer_s": 0.63}
+{"task": "qa1", "i": 16, "condition": "snm_trained", "correct": false, "pred": "office", "target": "kitchen", "prompt_tokens": 80, "build_s": 0.16, "answer_s": 0.5}
+{"task": "qa1", "i": 17, "condition": "full_context", "correct": false, "pred": "St. Daniel", "target": "office", "prompt_tokens": 739, "build_s": 0.0, "answer_s": 2.47}
+{"task": "qa1", "i": 17, "condition": "rag_topk", "correct": true, "pred": "office", "target": "office", "prompt_tokens": 276, "build_s": 0.0, "answer_s": 0.94}
+{"task": "qa1", "i": 17, "condition": "summary", "correct": false, "pred": "St. Daniel", "target": "office", "prompt_tokens": 170, "build_s": 20.02, "answer_s": 0.95}
+{"task": "qa1", "i": 17, "condition": "snm_notes", "correct": false, "pred": "Cairo", "target": "office", "prompt_tokens": 47, "build_s": 2.86, "answer_s": 0.56}
+{"task": "qa1", "i": 17, "condition": "snm_trained", "correct": false, "pred": "kitchen", "target": "office", "prompt_tokens": 64, "build_s": 0.13, "answer_s": 0.6}
+{"task": "qa1", "i": 18, "condition": "full_context", "correct": false, "pred": "Atlanta", "target": "kitchen", "prompt_tokens": 700, "build_s": 0.0, "answer_s": 2.07}
+{"task": "qa1", "i": 18, "condition": "rag_topk", "correct": false, "pred": "Hallway", "target": "kitchen", "prompt_tokens": 212, "build_s": 0.0, "answer_s": 0.94}
+{"task": "qa1", "i": 18, "condition": "summary", "correct": false, "pred": "Eden", "target": "kitchen", "prompt_tokens": 141, "build_s": 15.51, "answer_s": 0.75}
+{"task": "qa1", "i": 18, "condition": "snm_notes", "correct": false, "pred": "Atlanta", "target": "kitchen", "prompt_tokens": 75, "build_s": 6.4, "answer_s": 0.5}
+{"task": "qa1", "i": 18, "condition": "snm_trained", "correct": false, "pred": "Office", "target": "kitchen", "prompt_tokens": 59, "build_s": 0.12, "answer_s": 0.45}
+{"task": "qa1", "i": 19, "condition": "full_context", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 724, "build_s": 0.0, "answer_s": 2.27}
+{"task": "qa1", "i": 19, "condition": "rag_topk", "correct": false, "pred": "Bathroom", "target": "bedroom", "prompt_tokens": 292, "build_s": 0.0, "answer_s": 1.09}
+{"task": "qa1", "i": 19, "condition": "summary", "correct": false, "pred": "Bathroom", "target": "bedroom", "prompt_tokens": 170, "build_s": 19.05, "answer_s": 0.82}
+{"task": "qa1", "i": 19, "condition": "snm_notes", "correct": false, "pred": "Kitchen", "target": "bedroom", "prompt_tokens": 92, "build_s": 8.93, "answer_s": 0.52}
+{"task": "qa1", "i": 19, "condition": "snm_trained", "correct": false, "pred": "office", "target": "bedroom", "prompt_tokens": 78, "build_s": 0.12, "answer_s": 0.49}
+{"task": "qa1", "i": 20, "condition": "full_context", "correct": false, "pred": "Bedroom", "target": "hallway", "prompt_tokens": 737, "build_s": 0.0, "answer_s": 2.36}
+{"task": "qa1", "i": 20, "condition": "rag_topk", "correct": false, "pred": "bedroom", "target": "hallway", "prompt_tokens": 294, "build_s": 0.0, "answer_s": 1.09}
+{"task": "qa1", "i": 20, "condition": "summary", "correct": false, "pred": "office", "target": "hallway", "prompt_tokens": 66, "build_s": 5.57, "answer_s": 0.47}
+{"task": "qa1", "i": 20, "condition": "snm_notes", "correct": false, "pred": "bedroom", "target": "hallway", "prompt_tokens": 58, "build_s": 4.37, "answer_s": 0.57}
+{"task": "qa1", "i": 20, "condition": "snm_trained", "correct": false, "pred": "kitchen", "target": "hallway", "prompt_tokens": 91, "build_s": 0.13, "answer_s": 0.64}
+{"task": "qa1", "i": 21, "condition": "full_context", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 707, "build_s": 0.0, "answer_s": 2.24}
+{"task": "qa1", "i": 21, "condition": "rag_topk", "correct": true, "pred": "Bedroom", "target": "bedroom", "prompt_tokens": 245, "build_s": 0.0, "answer_s": 0.99}
+{"task": "qa1", "i": 21, "condition": "summary", "correct": false, "pred": "Mary is at John's house.", "target": "bedroom", "prompt_tokens": 147, "build_s": 16.04, "answer_s": 1.42}
+{"task": "qa1", "i": 21, "condition": "snm_notes", "correct": false, "pred": "hallway", "target": "bedroom", "prompt_tokens": 45, "build_s": 2.47, "answer_s": 0.55}
+{"task": "qa1", "i": 21, "condition": "snm_trained", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 53, "build_s": 0.07, "answer_s": 0.58}
+{"task": "qa1", "i": 22, "condition": "full_context", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 727, "build_s": 0.0, "answer_s": 2.32}
+{"task": "qa1", "i": 22, "condition": "rag_topk", "correct": false, "pred": "Bathroom", "target": "bedroom", "prompt_tokens": 294, "build_s": 0.0, "answer_s": 1.09}
+{"task": "qa1", "i": 22, "condition": "summary", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 168, "build_s": 18.89, "answer_s": 0.81}
+{"task": "qa1", "i": 22, "condition": "snm_notes", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 170, "build_s": 18.99, "answer_s": 0.82}
+{"task": "qa1", "i": 22, "condition": "snm_trained", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 87, "build_s": 0.14, "answer_s": 0.64}
+{"task": "qa1", "i": 23, "condition": "full_context", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 592, "build_s": 0.0, "answer_s": 1.97}
+{"task": "qa1", "i": 23, "condition": "rag_topk", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 282, "build_s": 0.0, "answer_s": 1.06}
+{"task": "qa1", "i": 23, "condition": "summary", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 93, "build_s": 8.75, "answer_s": 0.65}
+{"task": "qa1", "i": 23, "condition": "snm_notes", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 45, "build_s": 2.18, "answer_s": 0.55}
+{"task": "qa1", "i": 23, "condition": "snm_trained", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 68, "build_s": 0.13, "answer_s": 0.59}
+{"task": "qa1", "i": 24, "condition": "full_context", "correct": true, "pred": "Bedroom", "target": "bedroom", "prompt_tokens": 703, "build_s": 0.0, "answer_s": 2.2}
+{"task": "qa1", "i": 24, "condition": "rag_topk", "correct": true, "pred": "Bedroom", "target": "bedroom", "prompt_tokens": 288, "build_s": 0.0, "answer_s": 1.07}
+{"task": "qa1", "i": 24, "condition": "summary", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 159, "build_s": 17.71, "answer_s": 0.8}
+{"task": "qa1", "i": 24, "condition": "snm_notes", "correct": true, "pred": "Bedroom", "target": "bedroom", "prompt_tokens": 111, "build_s": 11.25, "answer_s": 0.69}
+{"task": "qa1", "i": 24, "condition": "snm_trained", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 88, "build_s": 0.18, "answer_s": 0.65}
+{"task": "qa2", "i": 0, "condition": "full_context", "correct": false, "pred": "office", "target": "kitchen", "prompt_tokens": 732, "build_s": 0.0, "answer_s": 2.24}
+{"task": "qa2", "i": 0, "condition": "rag_topk", "correct": false, "pred": "office", "target": "kitchen", "prompt_tokens": 252, "build_s": 0.0, "answer_s": 0.87}
+{"task": "qa2", "i": 0, "condition": "summary", "correct": false, "pred": "The football is in the backyard.", "target": "kitchen", "prompt_tokens": 171, "build_s": 19.1, "answer_s": 1.47}
+{"task": "qa2", "i": 0, "condition": "snm_notes", "correct": false, "pred": "office", "target": "kitchen", "prompt_tokens": 60, "build_s": 4.6, "answer_s": 0.46}
+{"task": "qa2", "i": 0, "condition": "snm_trained", "correct": false, "pred": "office", "target": "kitchen", "prompt_tokens": 139, "build_s": 0.21, "answer_s": 0.62}
+{"task": "qa2", "i": 1, "condition": "full_context", "correct": true, "pred": "garden", "target": "garden", "prompt_tokens": 709, "build_s": 0.0, "answer_s": 2.23}
+{"task": "qa2", "i": 1, "condition": "rag_topk", "correct": false, "pred": "office", "target": "garden", "prompt_tokens": 277, "build_s": 0.0, "answer_s": 0.93}
+{"task": "qa2", "i": 1, "condition": "summary", "correct": false, "pred": "office", "target": "garden", "prompt_tokens": 171, "build_s": 18.94, "answer_s": 0.7}
+{"task": "qa2", "i": 1, "condition": "snm_notes", "correct": false, "pred": "office", "target": "garden", "prompt_tokens": 171, "build_s": 19.64, "answer_s": 0.74}
+{"task": "qa2", "i": 1, "condition": "snm_trained", "correct": true, "pred": "garden", "target": "garden", "prompt_tokens": 140, "build_s": 0.27, "answer_s": 0.82}
+{"task": "qa2", "i": 2, "condition": "full_context", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 741, "build_s": 0.0, "answer_s": 2.51}
+{"task": "qa2", "i": 2, "condition": "rag_topk", "correct": false, "pred": "kitchen", "target": "bedroom", "prompt_tokens": 296, "build_s": 0.0, "answer_s": 1.19}
+{"task": "qa2", "i": 2, "condition": "summary", "correct": false, "pred": "kitchen", "target": "bedroom", "prompt_tokens": 171, "build_s": 22.42, "answer_s": 0.84}
+{"task": "qa2", "i": 2, "condition": "snm_notes", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 85, "build_s": 7.92, "answer_s": 0.67}
+{"task": "qa2", "i": 2, "condition": "snm_trained", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 106, "build_s": 0.17, "answer_s": 0.7}
+{"task": "qa2", "i": 3, "condition": "full_context", "correct": false, "pred": "delighted", "target": "bedroom", "prompt_tokens": 728, "build_s": 0.0, "answer_s": 2.39}
+{"task": "qa2", "i": 3, "condition": "rag_topk", "correct": false, "pred": "Kitchen", "target": "bedroom", "prompt_tokens": 297, "build_s": 0.0, "answer_s": 1.04}
+{"task": "qa2", "i": 3, "condition": "summary", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 170, "build_s": 19.84, "answer_s": 0.86}
+{"task": "qa2", "i": 3, "condition": "snm_notes", "correct": false, "pred": "applesauce", "target": "bedroom", "prompt_tokens": 89, "build_s": 8.86, "answer_s": 0.82}
+{"task": "qa2", "i": 3, "condition": "snm_trained", "correct": false, "pred": "office", "target": "bedroom", "prompt_tokens": 111, "build_s": 0.19, "answer_s": 0.6}
+{"task": "qa2", "i": 4, "condition": "full_context", "correct": false, "pred": "garden", "target": "kitchen", "prompt_tokens": 750, "build_s": 0.0, "answer_s": 2.42}
+{"task": "qa2", "i": 4, "condition": "rag_topk", "correct": false, "pred": "office", "target": "kitchen", "prompt_tokens": 258, "build_s": 0.0, "answer_s": 0.91}
+{"task": "qa2", "i": 4, "condition": "summary", "correct": true, "pred": "kitchen", "target": "kitchen", "prompt_tokens": 171, "build_s": 19.79, "answer_s": 0.82}
+{"task": "qa2", "i": 4, "condition": "snm_notes", "correct": false, "pred": "hallway", "target": "kitchen", "prompt_tokens": 170, "build_s": 19.2, "answer_s": 0.85}
+{"task": "qa2", "i": 4, "condition": "snm_trained", "correct": false, "pred": "garden", "target": "kitchen", "prompt_tokens": 145, "build_s": 0.19, "answer_s": 0.77}
+{"task": "qa2", "i": 5, "condition": "full_context", "correct": false, "pred": "kitchen", "target": "hallway", "prompt_tokens": 406, "build_s": 0.0, "answer_s": 1.43}
+{"task": "qa2", "i": 5, "condition": "rag_topk", "correct": false, "pred": "garden", "target": "hallway", "prompt_tokens": 75, "build_s": 0.0, "answer_s": 0.67}
+{"task": "qa2", "i": 5, "condition": "summary", "correct": false, "pred": "garden", "target": "hallway", "prompt_tokens": 91, "build_s": 8.0, "answer_s": 0.65}
+{"task": "qa2", "i": 5, "condition": "snm_notes", "correct": false, "pred": "kitchen", "target": "hallway", "prompt_tokens": 63, "build_s": 4.08, "answer_s": 0.61}
+{"task": "qa2", "i": 5, "condition": "snm_trained", "correct": false, "pred": "garden", "target": "hallway", "prompt_tokens": 89, "build_s": 0.07, "answer_s": 0.65}
+{"task": "qa2", "i": 6, "condition": "full_context", "correct": false, "pred": "bathroom", "target": "kitchen", "prompt_tokens": 729, "build_s": 0.0, "answer_s": 2.3}
+{"task": "qa2", "i": 6, "condition": "rag_topk", "correct": false, "pred": "bathroom", "target": "kitchen", "prompt_tokens": 293, "build_s": 0.0, "answer_s": 1.21}
+{"task": "qa2", "i": 6, "condition": "summary", "correct": false, "pred": "bathroom", "target": "kitchen", "prompt_tokens": 171, "build_s": 18.93, "answer_s": 0.82}
+{"task": "qa2", "i": 6, "condition": "snm_notes", "correct": false, "pred": "bathroom", "target": "kitchen", "prompt_tokens": 63, "build_s": 4.85, "answer_s": 0.6}
+{"task": "qa2", "i": 6, "condition": "snm_trained", "correct": false, "pred": "garden", "target": "kitchen", "prompt_tokens": 143, "build_s": 0.24, "answer_s": 0.76}
+{"task": "qa2", "i": 7, "condition": "full_context", "correct": false, "pred": "bedroom", "target": "garden", "prompt_tokens": 733, "build_s": 0.0, "answer_s": 2.34}
+{"task": "qa2", "i": 7, "condition": "rag_topk", "correct": false, "pred": "Circus", "target": "garden", "prompt_tokens": 254, "build_s": 0.0, "answer_s": 1.14}
+{"task": "qa2", "i": 7, "condition": "summary", "correct": false, "pred": "cage", "target": "garden", "prompt_tokens": 170, "build_s": 18.98, "answer_s": 0.82}
+{"task": "qa2", "i": 7, "condition": "snm_notes", "correct": false, "pred": "cage", "target": "garden", "prompt_tokens": 155, "build_s": 17.0, "answer_s": 0.78}
+{"task": "qa2", "i": 7, "condition": "snm_trained", "correct": false, "pred": "bedroom", "target": "garden", "prompt_tokens": 60, "build_s": 0.12, "answer_s": 0.59}
+{"task": "qa2", "i": 8, "condition": "full_context", "correct": false, "pred": "bathroom", "target": "bedroom", "prompt_tokens": 557, "build_s": 0.0, "answer_s": 1.88}
+{"task": "qa2", "i": 8, "condition": "rag_topk", "correct": false, "pred": "hallway", "target": "bedroom", "prompt_tokens": 294, "build_s": 0.0, "answer_s": 1.09}
+{"task": "qa2", "i": 8, "condition": "summary", "correct": false, "pred": "office", "target": "bedroom", "prompt_tokens": 171, "build_s": 18.38, "answer_s": 0.7}
+{"task": "qa2", "i": 8, "condition": "snm_notes", "correct": false, "pred": "Kitchen", "target": "bedroom", "prompt_tokens": 79, "build_s": 6.46, "answer_s": 0.5}
+{"task": "qa2", "i": 8, "condition": "snm_trained", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 133, "build_s": 0.16, "answer_s": 0.74}
+{"task": "qa2", "i": 9, "condition": "full_context", "correct": true, "pred": "bathroom", "target": "bathroom", "prompt_tokens": 690, "build_s": 0.0, "answer_s": 2.24}
+{"task": "qa2", "i": 9, "condition": "rag_topk", "correct": false, "pred": "hallway", "target": "bathroom", "prompt_tokens": 293, "build_s": 0.0, "answer_s": 1.15}
+{"task": "qa2", "i": 9, "condition": "summary", "correct": false, "pred": "hallway", "target": "bathroom", "prompt_tokens": 171, "build_s": 18.91, "answer_s": 0.82}
+{"task": "qa2", "i": 9, "condition": "snm_notes", "correct": false, "pred": "kitchen", "target": "bathroom", "prompt_tokens": 79, "build_s": 6.84, "answer_s": 0.63}
+{"task": "qa2", "i": 9, "condition": "snm_trained", "correct": true, "pred": "bathroom", "target": "bathroom", "prompt_tokens": 87, "build_s": 0.12, "answer_s": 0.65}
+{"task": "qa2", "i": 10, "condition": "full_context", "correct": false, "pred": "hallway", "target": "bathroom", "prompt_tokens": 687, "build_s": 0.0, "answer_s": 2.19}
+{"task": "qa2", "i": 10, "condition": "rag_topk", "correct": false, "pred": "Garden", "target": "bathroom", "prompt_tokens": 263, "build_s": 0.0, "answer_s": 1.02}
+{"task": "qa2", "i": 10, "condition": "summary", "correct": false, "pred": "Hallway", "target": "bathroom", "prompt_tokens": 170, "build_s": 18.85, "answer_s": 0.82}
+{"task": "qa2", "i": 10, "condition": "snm_notes", "correct": false, "pred": "hallway", "target": "bathroom", "prompt_tokens": 108, "build_s": 10.79, "answer_s": 0.68}
+{"task": "qa2", "i": 10, "condition": "snm_trained", "correct": false, "pred": "office", "target": "bathroom", "prompt_tokens": 101, "build_s": 0.17, "answer_s": 0.55}
+{"task": "qa2", "i": 11, "condition": "full_context", "correct": false, "pred": "bathroom", "target": "bedroom", "prompt_tokens": 687, "build_s": 0.0, "answer_s": 2.19}
+{"task": "qa2", "i": 11, "condition": "rag_topk", "correct": false, "pred": "kitchen", "target": "bedroom", "prompt_tokens": 215, "build_s": 0.0, "answer_s": 0.91}
+{"task": "qa2", "i": 11, "condition": "summary", "correct": false, "pred": "Kitchen", "target": "bedroom", "prompt_tokens": 173, "build_s": 18.91, "answer_s": 0.7}
+{"task": "qa2", "i": 11, "condition": "snm_notes", "correct": false, "pred": "kitchen", "target": "bedroom", "prompt_tokens": 171, "build_s": 18.8, "answer_s": 0.82}
+{"task": "qa2", "i": 11, "condition": "snm_trained", "correct": false, "pred": "kitchen", "target": "bedroom", "prompt_tokens": 105, "build_s": 0.17, "answer_s": 0.66}
+{"task": "qa2", "i": 12, "condition": "full_context", "correct": true, "pred": "bathroom", "target": "bathroom", "prompt_tokens": 737, "build_s": 0.0, "answer_s": 2.34}
+{"task": "qa2", "i": 12, "condition": "rag_topk", "correct": false, "pred": "kitchen", "target": "bathroom", "prompt_tokens": 260, "build_s": 0.0, "answer_s": 1.01}
+{"task": "qa2", "i": 12, "condition": "summary", "correct": false, "pred": "bedroom", "target": "bathroom", "prompt_tokens": 172, "build_s": 19.0, "answer_s": 0.83}
+{"task": "qa2", "i": 12, "condition": "snm_notes", "correct": false, "pred": "office", "target": "bathroom", "prompt_tokens": 171, "build_s": 18.97, "answer_s": 0.7}
+{"task": "qa2", "i": 12, "condition": "snm_trained", "correct": true, "pred": "bathroom", "target": "bathroom", "prompt_tokens": 164, "build_s": 0.23, "answer_s": 0.79}
+{"task": "qa2", "i": 13, "condition": "full_context", "correct": false, "pred": "bank", "target": "kitchen", "prompt_tokens": 741, "build_s": 0.0, "answer_s": 2.19}
+{"task": "qa2", "i": 13, "condition": "rag_topk", "correct": false, "pred": "Africa", "target": "kitchen", "prompt_tokens": 298, "build_s": 0.0, "answer_s": 0.96}
+{"task": "qa2", "i": 13, "condition": "summary", "correct": false, "pred": "bedroom", "target": "kitchen", "prompt_tokens": 153, "build_s": 16.88, "answer_s": 0.78}
+{"task": "qa2", "i": 13, "condition": "snm_notes", "correct": false, "pred": "office", "target": "kitchen", "prompt_tokens": 87, "build_s": 8.02, "answer_s": 0.53}
+{"task": "qa2", "i": 13, "condition": "snm_trained", "correct": true, "pred": "kitchen", "target": "kitchen", "prompt_tokens": 113, "build_s": 0.16, "answer_s": 0.7}
+{"task": "qa2", "i": 14, "condition": "full_context", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 738, "build_s": 0.0, "answer_s": 2.32}
+{"task": "qa2", "i": 14, "condition": "rag_topk", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 287, "build_s": 0.0, "answer_s": 1.19}
+{"task": "qa2", "i": 14, "condition": "summary", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 171, "build_s": 19.01, "answer_s": 0.82}
+{"task": "qa2", "i": 14, "condition": "snm_notes", "correct": false, "pred": "kitchen", "target": "bedroom", "prompt_tokens": 171, "build_s": 19.0, "answer_s": 0.82}
+{"task": "qa2", "i": 14, "condition": "snm_trained", "correct": false, "pred": "bathroom", "target": "bedroom", "prompt_tokens": 79, "build_s": 0.16, "answer_s": 0.63}
+{"task": "qa2", "i": 15, "condition": "full_context", "correct": false, "pred": "The apple is in the kitchen.", "target": "garden", "prompt_tokens": 731, "build_s": 0.0, "answer_s": 2.98}
+{"task": "qa2", "i": 15, "condition": "rag_topk", "correct": false, "pred": "bedroom", "target": "garden", "prompt_tokens": 279, "build_s": 0.0, "answer_s": 1.05}
+{"task": "qa2", "i": 15, "condition": "summary", "correct": false, "pred": "bedroom", "target": "garden", "prompt_tokens": 171, "build_s": 18.99, "answer_s": 0.82}
+{"task": "qa2", "i": 15, "condition": "snm_notes", "correct": false, "pred": "Downstairs", "target": "garden", "prompt_tokens": 86, "build_s": 7.86, "answer_s": 0.65}
+{"task": "qa2", "i": 15, "condition": "snm_trained", "correct": false, "pred": "office", "target": "garden", "prompt_tokens": 153, "build_s": 0.2, "answer_s": 0.65}
+{"task": "qa2", "i": 16, "condition": "full_context", "correct": false, "pred": "hallway", "target": "bedroom", "prompt_tokens": 734, "build_s": 0.0, "answer_s": 2.33}
+{"task": "qa2", "i": 16, "condition": "rag_topk", "correct": false, "pred": "office", "target": "bedroom", "prompt_tokens": 293, "build_s": 0.0, "answer_s": 0.95}
+{"task": "qa2", "i": 16, "condition": "summary", "correct": false, "pred": "The football is on the table.", "target": "bedroom", "prompt_tokens": 170, "build_s": 18.99, "answer_s": 1.46}
+{"task": "qa2", "i": 16, "condition": "snm_notes", "correct": false, "pred": "hallway", "target": "bedroom", "prompt_tokens": 77, "build_s": 6.84, "answer_s": 0.63}
+{"task": "qa2", "i": 16, "condition": "snm_trained", "correct": false, "pred": "garden", "target": "bedroom", "prompt_tokens": 177, "build_s": 0.27, "answer_s": 0.82}
+{"task": "qa2", "i": 17, "condition": "full_context", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 732, "build_s": 0.0, "answer_s": 2.28}
+{"task": "qa2", "i": 17, "condition": "rag_topk", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 293, "build_s": 0.0, "answer_s": 1.1}
+{"task": "qa2", "i": 17, "condition": "summary", "correct": false, "pred": "Kitchen", "target": "bedroom", "prompt_tokens": 87, "build_s": 8.16, "answer_s": 0.52}
+{"task": "qa2", "i": 17, "condition": "snm_notes", "correct": false, "pred": "Kitchen", "target": "bedroom", "prompt_tokens": 50, "build_s": 3.13, "answer_s": 0.45}
+{"task": "qa2", "i": 17, "condition": "snm_trained", "correct": false, "pred": "hallway", "target": "bedroom", "prompt_tokens": 78, "build_s": 0.11, "answer_s": 0.62}
+{"task": "qa2", "i": 18, "condition": "full_context", "correct": false, "pred": "summit", "target": "garden", "prompt_tokens": 725, "build_s": 0.0, "answer_s": 2.3}
+{"task": "qa2", "i": 18, "condition": "rag_topk", "correct": false, "pred": "bottle", "target": "garden", "prompt_tokens": 291, "build_s": 0.0, "answer_s": 1.1}
+{"task": "qa2", "i": 18, "condition": "summary", "correct": false, "pred": "Milk", "target": "garden", "prompt_tokens": 168, "build_s": 18.81, "answer_s": 0.81}
+{"task": "qa2", "i": 18, "condition": "snm_notes", "correct": false, "pred": "Cage", "target": "garden", "prompt_tokens": 47, "build_s": 2.68, "answer_s": 0.55}
+{"task": "qa2", "i": 18, "condition": "snm_trained", "correct": true, "pred": "garden", "target": "garden", "prompt_tokens": 56, "build_s": 0.11, "answer_s": 0.57}
+{"task": "qa2", "i": 19, "condition": "full_context", "correct": true, "pred": "garden", "target": "garden", "prompt_tokens": 737, "build_s": 0.0, "answer_s": 2.32}
+{"task": "qa2", "i": 19, "condition": "rag_topk", "correct": true, "pred": "garden", "target": "garden", "prompt_tokens": 288, "build_s": 0.0, "answer_s": 1.06}
+{"task": "qa2", "i": 19, "condition": "summary", "correct": false, "pred": "milk", "target": "garden", "prompt_tokens": 66, "build_s": 5.34, "answer_s": 0.59}
+{"task": "qa2", "i": 19, "condition": "snm_notes", "correct": false, "pred": "kitchen", "target": "garden", "prompt_tokens": 52, "build_s": 3.53, "answer_s": 0.58}
+{"task": "qa2", "i": 19, "condition": "snm_trained", "correct": false, "pred": "bathroom", "target": "garden", "prompt_tokens": 70, "build_s": 0.12, "answer_s": 0.59}
+{"task": "qa2", "i": 20, "condition": "full_context", "correct": true, "pred": "office", "target": "office", "prompt_tokens": 763, "build_s": 0.0, "answer_s": 2.26}
+{"task": "qa2", "i": 20, "condition": "rag_topk", "correct": false, "pred": "bathroom", "target": "office", "prompt_tokens": 79, "build_s": 0.0, "answer_s": 0.63}
+{"task": "qa2", "i": 20, "condition": "summary", "correct": false, "pred": "bathroom", "target": "office", "prompt_tokens": 171, "build_s": 19.11, "answer_s": 0.82}
+{"task": "qa2", "i": 20, "condition": "snm_notes", "correct": false, "pred": "Appomattox Court House", "target": "office", "prompt_tokens": 170, "build_s": 19.31, "answer_s": 1.36}
+{"task": "qa2", "i": 20, "condition": "snm_trained", "correct": true, "pred": "office", "target": "office", "prompt_tokens": 69, "build_s": 0.11, "answer_s": 0.48}
+{"task": "qa2", "i": 21, "condition": "full_context", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 739, "build_s": 0.0, "answer_s": 2.3}
+{"task": "qa2", "i": 21, "condition": "rag_topk", "correct": true, "pred": "bedroom", "target": "bedroom", "prompt_tokens": 294, "build_s": 0.0, "answer_s": 1.19}
+{"task": "qa2", "i": 21, "condition": "summary", "correct": false, "pred": "office.", "target": "bedroom", "prompt_tokens": 171, "build_s": 20.73, "answer_s": 0.97}
+{"task": "qa2", "i": 21, "condition": "snm_notes", "correct": false, "pred": "milkroom", "target": "bedroom", "prompt_tokens": 171, "build_s": 21.87, "answer_s": 1.0}
+{"task": "qa2", "i": 21, "condition": "snm_trained", "correct": false, "pred": "garden", "target": "bedroom", "prompt_tokens": 171, "build_s": 0.23, "answer_s": 0.88}
+{"task": "qa2", "i": 22, "condition": "full_context", "correct": false, "pred": "bathroom", "target": "garden", "prompt_tokens": 742, "build_s": 0.0, "answer_s": 2.34}
+{"task": "qa2", "i": 22, "condition": "rag_topk", "correct": false, "pred": "office", "target": "garden", "prompt_tokens": 254, "build_s": 0.0, "answer_s": 0.89}
+{"task": "qa2", "i": 22, "condition": "summary", "correct": false, "pred": "bathroom", "target": "garden", "prompt_tokens": 171, "build_s": 20.11, "answer_s": 0.93}
+{"task": "qa2", "i": 22, "condition": "snm_notes", "correct": false, "pred": "kitchen", "target": "garden", "prompt_tokens": 171, "build_s": 19.6, "answer_s": 0.83}
+{"task": "qa2", "i": 22, "condition": "snm_trained", "correct": false, "pred": "office", "target": "garden", "prompt_tokens": 170, "build_s": 0.19, "answer_s": 0.71}
+{"task": "qa2", "i": 23, "condition": "full_context", "correct": false, "pred": "office", "target": "bathroom", "prompt_tokens": 734, "build_s": 0.0, "answer_s": 2.17}
+{"task": "qa2", "i": 23, "condition": "rag_topk", "correct": false, "pred": "The milk is in the fridge.", "target": "bathroom", "prompt_tokens": 280, "build_s": 0.0, "answer_s": 1.71}
+{"task": "qa2", "i": 23, "condition": "summary", "correct": true, "pred": "bathroom", "target": "bathroom", "prompt_tokens": 171, "build_s": 19.03, "answer_s": 0.85}
+{"task": "qa2", "i": 23, "condition": "snm_notes", "correct": false, "pred": "house", "target": "bathroom", "prompt_tokens": 60, "build_s": 4.47, "answer_s": 0.46}
+{"task": "qa2", "i": 23, "condition": "snm_trained", "correct": false, "pred": "office", "target": "bathroom", "prompt_tokens": 150, "build_s": 0.24, "answer_s": 0.67}
+{"task": "qa2", "i": 24, "condition": "full_context", "correct": false, "pred": "Garden", "target": "office", "prompt_tokens": 733, "build_s": 0.0, "answer_s": 2.3}
+{"task": "qa2", "i": 24, "condition": "rag_topk", "correct": false, "pred": "garden", "target": "office", "prompt_tokens": 292, "build_s": 0.0, "answer_s": 1.09}
+{"task": "qa2", "i": 24, "condition": "summary", "correct": false, "pred": "bedroom", "target": "office", "prompt_tokens": 171, "build_s": 19.23, "answer_s": 0.83}
+{"task": "qa2", "i": 24, "condition": "snm_notes", "correct": false, "pred": "bedroom", "target": "office", "prompt_tokens": 171, "build_s": 19.11, "answer_s": 0.83}
+{"task": "qa2", "i": 24, "condition": "snm_trained", "correct": false, "pred": "garden", "target": "office", "prompt_tokens": 175, "build_s": 0.25, "answer_s": 0.86}
+{"task": "qa9", "i": 0, "condition": "full_context", "correct": false, "pred": "Yes", "target": "no", "prompt_tokens": 738, "build_s": 0.0, "answer_s": 2.27}
+{"task": "qa9", "i": 0, "condition": "rag_topk", "correct": false, "pred": "Bedroom", "target": "no", "prompt_tokens": 280, "build_s": 0.0, "answer_s": 1.08}
+{"task": "qa9", "i": 0, "condition": "summary", "correct": false, "pred": "Notepad", "target": "no", "prompt_tokens": 122, "build_s": 12.83, "answer_s": 0.73}
+{"task": "qa9", "i": 0, "condition": "snm_notes", "correct": false, "pred": "Island", "target": "no", "prompt_tokens": 52, "build_s": 3.26, "answer_s": 0.59}
+{"task": "qa9", "i": 0, "condition": "snm_trained", "correct": false, "pred": "Yes", "target": "no", "prompt_tokens": 76, "build_s": 0.13, "answer_s": 0.5}
+{"task": "qa9", "i": 1, "condition": "full_context", "correct": false, "pred": "Not", "target": "no", "prompt_tokens": 744, "build_s": 0.0, "answer_s": 2.19}
+{"task": "qa9", "i": 1, "condition": "rag_topk", "correct": false, "pred": "Not", "target": "no", "prompt_tokens": 295, "build_s": 0.0, "answer_s": 1.06}
+{"task": "qa9", "i": 1, "condition": "summary", "correct": false, "pred": "Notepad", "target": "no", "prompt_tokens": 138, "build_s": 14.87, "answer_s": 0.78}
+{"task": "qa9", "i": 1, "condition": "snm_notes", "correct": false, "pred": "Yes", "target": "no", "prompt_tokens": 75, "build_s": 6.36, "answer_s": 0.51}
+{"task": "qa9", "i": 1, "condition": "snm_trained", "correct": false, "pred": "Mary is not in the bathroom.", "target": "no", "prompt_tokens": 89, "build_s": 0.17, "answer_s": 1.3}
+{"task": "qa9", "i": 2, "condition": "full_context", "correct": false, "pred": "Not", "target": "yes", "prompt_tokens": 734, "build_s": 0.0, "answer_s": 2.18}
+{"task": "qa9", "i": 2, "condition": "rag_topk", "correct": false, "pred": "Kitchen", "target": "yes", "prompt_tokens": 272, "build_s": 0.0, "answer_s": 0.94}
+{"task": "qa9", "i": 2, "condition": "summary", "correct": false, "pred": "Kitchen", "target": "yes", "prompt_tokens": 172, "build_s": 19.11, "answer_s": 0.7}
+{"task": "qa9", "i": 2, "condition": "snm_notes", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 71, "build_s": 5.79, "answer_s": 0.47}
+{"task": "qa9", "i": 2, "condition": "snm_trained", "correct": false, "pred": "Mary is in the kitchen.", "target": "yes", "prompt_tokens": 91, "build_s": 0.18, "answer_s": 1.2}
+{"task": "qa9", "i": 3, "condition": "full_context", "correct": false, "pred": "Sandra", "target": "no", "prompt_tokens": 726, "build_s": 0.0, "answer_s": 2.28}
+{"task": "qa9", "i": 3, "condition": "rag_topk", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 295, "build_s": 0.0, "answer_s": 0.98}
+{"task": "qa9", "i": 3, "condition": "summary", "correct": false, "pred": "Notepad", "target": "no", "prompt_tokens": 172, "build_s": 19.21, "answer_s": 0.83}
+{"task": "qa9", "i": 3, "condition": "snm_notes", "correct": false, "pred": "Yes", "target": "no", "prompt_tokens": 138, "build_s": 14.77, "answer_s": 0.64}
+{"task": "qa9", "i": 3, "condition": "snm_trained", "correct": false, "pred": "Sandra is not in the hallway.", "target": "no", "prompt_tokens": 75, "build_s": 0.17, "answer_s": 1.27}
+{"task": "qa9", "i": 4, "condition": "full_context", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 717, "build_s": 0.0, "answer_s": 2.13}
+{"task": "qa9", "i": 4, "condition": "rag_topk", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 282, "build_s": 0.0, "answer_s": 0.95}
+{"task": "qa9", "i": 4, "condition": "summary", "correct": false, "pred": "Sandra", "target": "no", "prompt_tokens": 138, "build_s": 14.7, "answer_s": 0.76}
+{"task": "qa9", "i": 4, "condition": "snm_notes", "correct": false, "pred": "Sandra", "target": "no", "prompt_tokens": 47, "build_s": 2.53, "answer_s": 0.55}
+{"task": "qa9", "i": 4, "condition": "snm_trained", "correct": false, "pred": "Sandra is in the hallway.", "target": "no", "prompt_tokens": 81, "build_s": 0.12, "answer_s": 1.27}
+{"task": "qa9", "i": 5, "condition": "full_context", "correct": false, "pred": "John", "target": "yes", "prompt_tokens": 737, "build_s": 0.0, "answer_s": 2.21}
+{"task": "qa9", "i": 5, "condition": "rag_topk", "correct": false, "pred": "Not", "target": "yes", "prompt_tokens": 289, "build_s": 0.0, "answer_s": 0.96}
+{"task": "qa9", "i": 5, "condition": "summary", "correct": false, "pred": "John", "target": "yes", "prompt_tokens": 135, "build_s": 14.44, "answer_s": 0.64}
+{"task": "qa9", "i": 5, "condition": "snm_notes", "correct": false, "pred": "Isaac", "target": "yes", "prompt_tokens": 50, "build_s": 3.17, "answer_s": 0.59}
+{"task": "qa9", "i": 5, "condition": "snm_trained", "correct": false, "pred": "John", "target": "yes", "prompt_tokens": 86, "build_s": 0.15, "answer_s": 0.53}
+{"task": "qa9", "i": 6, "condition": "full_context", "correct": false, "pred": "Yes", "target": "no", "prompt_tokens": 857, "build_s": 0.0, "answer_s": 2.65}
+{"task": "qa9", "i": 6, "condition": "rag_topk", "correct": false, "pred": "Not", "target": "no", "prompt_tokens": 280, "build_s": 0.0, "answer_s": 0.97}
+{"task": "qa9", "i": 6, "condition": "summary", "correct": false, "pred": "Notepad", "target": "no", "prompt_tokens": 106, "build_s": 10.9, "answer_s": 0.69}
+{"task": "qa9", "i": 6, "condition": "snm_notes", "correct": false, "pred": "Not", "target": "no", "prompt_tokens": 126, "build_s": 13.48, "answer_s": 0.64}
+{"task": "qa9", "i": 6, "condition": "snm_trained", "correct": false, "pred": "John is not in the hallway.", "target": "no", "prompt_tokens": 71, "build_s": 0.1, "answer_s": 1.24}
+{"task": "qa9", "i": 7, "condition": "full_context", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 734, "build_s": 0.0, "answer_s": 2.21}
+{"task": "qa9", "i": 7, "condition": "rag_topk", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 296, "build_s": 0.0, "answer_s": 0.97}
+{"task": "qa9", "i": 7, "condition": "summary", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 172, "build_s": 19.19, "answer_s": 0.7}
+{"task": "qa9", "i": 7, "condition": "snm_notes", "correct": false, "pred": "Yes", "target": "no", "prompt_tokens": 59, "build_s": 4.19, "answer_s": 0.45}
+{"task": "qa9", "i": 7, "condition": "snm_trained", "correct": false, "pred": "Office", "target": "no", "prompt_tokens": 89, "build_s": 0.1, "answer_s": 0.56}
+{"task": "qa9", "i": 8, "condition": "full_context", "correct": false, "pred": "Not currently available.", "target": "no", "prompt_tokens": 715, "build_s": 0.0, "answer_s": 2.55}
+{"task": "qa9", "i": 8, "condition": "rag_topk", "correct": false, "pred": "Not", "target": "no", "prompt_tokens": 295, "build_s": 0.0, "answer_s": 1.01}
+{"task": "qa9", "i": 8, "condition": "summary", "correct": false, "pred": "Office", "target": "no", "prompt_tokens": 72, "build_s": 6.01, "answer_s": 0.48}
+{"task": "qa9", "i": 8, "condition": "snm_notes", "correct": false, "pred": "Sandra is not mentioned in either John", "target": "no", "prompt_tokens": 53, "build_s": 3.5, "answer_s": 1.21}
+{"task": "qa9", "i": 8, "condition": "snm_trained", "correct": false, "pred": "Sandra is not in the office.", "target": "no", "prompt_tokens": 96, "build_s": 0.13, "answer_s": 1.29}
+{"task": "qa9", "i": 9, "condition": "full_context", "correct": false, "pred": "Believes", "target": "yes", "prompt_tokens": 714, "build_s": 0.0, "answer_s": 2.29}
+{"task": "qa9", "i": 9, "condition": "rag_topk", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 287, "build_s": 0.0, "answer_s": 0.95}
+{"task": "qa9", "i": 9, "condition": "summary", "correct": false, "pred": "Notepad", "target": "yes", "prompt_tokens": 130, "build_s": 13.67, "answer_s": 0.74}
+{"task": "qa9", "i": 9, "condition": "snm_notes", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 54, "build_s": 3.45, "answer_s": 0.45}
+{"task": "qa9", "i": 9, "condition": "snm_trained", "correct": false, "pred": "John is not in the office.", "target": "yes", "prompt_tokens": 67, "build_s": 0.15, "answer_s": 1.23}
+{"task": "qa9", "i": 10, "condition": "full_context", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 731, "build_s": 0.0, "answer_s": 2.19}
+{"task": "qa9", "i": 10, "condition": "rag_topk", "correct": false, "pred": "Kitchen", "target": "yes", "prompt_tokens": 296, "build_s": 0.0, "answer_s": 0.96}
+{"task": "qa9", "i": 10, "condition": "summary", "correct": false, "pred": "No", "target": "yes", "prompt_tokens": 172, "build_s": 19.13, "answer_s": 0.7}
+{"task": "qa9", "i": 10, "condition": "snm_notes", "correct": false, "pred": "Daniel is not mentioned in the given information", "target": "yes", "prompt_tokens": 51, "build_s": 3.09, "answer_s": 1.21}
+{"task": "qa9", "i": 10, "condition": "snm_trained", "correct": false, "pred": "Daniel is not in the kitchen.", "target": "yes", "prompt_tokens": 99, "build_s": 0.17, "answer_s": 1.33}
+{"task": "qa9", "i": 11, "condition": "full_context", "correct": false, "pred": "No", "target": "yes", "prompt_tokens": 761, "build_s": 0.0, "answer_s": 2.23}
+{"task": "qa9", "i": 11, "condition": "rag_topk", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 251, "build_s": 0.0, "answer_s": 0.87}
+{"task": "qa9", "i": 11, "condition": "summary", "correct": false, "pred": "Hallway", "target": "yes", "prompt_tokens": 172, "build_s": 19.26, "answer_s": 0.84}
+{"task": "qa9", "i": 11, "condition": "snm_notes", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 65, "build_s": 5.11, "answer_s": 0.46}
+{"task": "qa9", "i": 11, "condition": "snm_trained", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 70, "build_s": 0.12, "answer_s": 0.46}
+{"task": "qa9", "i": 12, "condition": "full_context", "correct": false, "pred": "Not present", "target": "no", "prompt_tokens": 745, "build_s": 0.0, "answer_s": 2.34}
+{"task": "qa9", "i": 12, "condition": "rag_topk", "correct": false, "pred": "Bedroom", "target": "no", "prompt_tokens": 294, "build_s": 0.0, "answer_s": 1.1}
+{"task": "qa9", "i": 12, "condition": "summary", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 172, "build_s": 19.17, "answer_s": 0.7}
+{"task": "qa9", "i": 12, "condition": "snm_notes", "correct": false, "pred": "Mary is not mentioned in the given information", "target": "no", "prompt_tokens": 55, "build_s": 3.77, "answer_s": 1.25}
+{"task": "qa9", "i": 12, "condition": "snm_trained", "correct": false, "pred": "Mary is not in the bedroom.", "target": "no", "prompt_tokens": 78, "build_s": 0.13, "answer_s": 1.32}
+{"task": "qa9", "i": 13, "condition": "full_context", "correct": false, "pred": "Yes", "target": "no", "prompt_tokens": 692, "build_s": 0.0, "answer_s": 2.11}
+{"task": "qa9", "i": 13, "condition": "rag_topk", "correct": false, "pred": "Yes", "target": "no", "prompt_tokens": 278, "build_s": 0.0, "answer_s": 0.93}
+{"task": "qa9", "i": 13, "condition": "summary", "correct": false, "pred": "Sandra", "target": "no", "prompt_tokens": 172, "build_s": 19.05, "answer_s": 0.83}
+{"task": "qa9", "i": 13, "condition": "snm_notes", "correct": false, "pred": "office", "target": "no", "prompt_tokens": 129, "build_s": 13.47, "answer_s": 0.6}
+{"task": "qa9", "i": 13, "condition": "snm_trained", "correct": false, "pred": "Sandra is not in the bedroom.", "target": "no", "prompt_tokens": 79, "build_s": 0.11, "answer_s": 1.27}
+{"task": "qa9", "i": 14, "condition": "full_context", "correct": false, "pred": "not", "target": "no", "prompt_tokens": 735, "build_s": 0.0, "answer_s": 2.18}
+{"task": "qa9", "i": 14, "condition": "rag_topk", "correct": false, "pred": "Not", "target": "no", "prompt_tokens": 296, "build_s": 0.0, "answer_s": 0.99}
+{"task": "qa9", "i": 14, "condition": "summary", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 154, "build_s": 17.01, "answer_s": 0.65}
+{"task": "qa9", "i": 14, "condition": "snm_notes", "correct": false, "pred": "Sandra is not mentioned as being in", "target": "no", "prompt_tokens": 47, "build_s": 2.57, "answer_s": 1.19}
+{"task": "qa9", "i": 14, "condition": "snm_trained", "correct": false, "pred": "Sandra is not in the kitchen.", "target": "no", "prompt_tokens": 72, "build_s": 0.12, "answer_s": 1.26}
+{"task": "qa9", "i": 15, "condition": "full_context", "correct": false, "pred": "Not", "target": "yes", "prompt_tokens": 719, "build_s": 0.0, "answer_s": 2.17}
+{"task": "qa9", "i": 15, "condition": "rag_topk", "correct": false, "pred": "Not", "target": "yes", "prompt_tokens": 287, "build_s": 0.0, "answer_s": 0.95}
+{"task": "qa9", "i": 15, "condition": "summary", "correct": false, "pred": "Notepad", "target": "yes", "prompt_tokens": 172, "build_s": 19.31, "answer_s": 0.84}
+{"task": "qa9", "i": 15, "condition": "snm_notes", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 77, "build_s": 6.56, "answer_s": 0.5}
+{"task": "qa9", "i": 15, "condition": "snm_trained", "correct": false, "pred": "John is not in the garden.", "target": "yes", "prompt_tokens": 83, "build_s": 0.13, "answer_s": 1.26}
+{"task": "qa9", "i": 16, "condition": "full_context", "correct": false, "pred": "not", "target": "yes", "prompt_tokens": 706, "build_s": 0.0, "answer_s": 2.14}
+{"task": "qa9", "i": 16, "condition": "rag_topk", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 287, "build_s": 0.0, "answer_s": 0.96}
+{"task": "qa9", "i": 16, "condition": "summary", "correct": false, "pred": "Not", "target": "yes", "prompt_tokens": 74, "build_s": 6.22, "answer_s": 0.49}
+{"task": "qa9", "i": 16, "condition": "snm_notes", "correct": false, "pred": "Not", "target": "yes", "prompt_tokens": 50, "build_s": 3.03, "answer_s": 0.45}
+{"task": "qa9", "i": 16, "condition": "snm_trained", "correct": false, "pred": "Sandra is in the office.", "target": "yes", "prompt_tokens": 97, "build_s": 0.15, "answer_s": 1.34}
+{"task": "qa9", "i": 17, "condition": "full_context", "correct": false, "pred": "not", "target": "yes", "prompt_tokens": 708, "build_s": 0.0, "answer_s": 2.12}
+{"task": "qa9", "i": 17, "condition": "rag_topk", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 280, "build_s": 0.0, "answer_s": 0.95}
+{"task": "qa9", "i": 17, "condition": "summary", "correct": false, "pred": "Mary is not mentioned in the given information", "target": "yes", "prompt_tokens": 110, "build_s": 11.23, "answer_s": 1.36}
+{"task": "qa9", "i": 17, "condition": "snm_notes", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 86, "build_s": 7.83, "answer_s": 0.52}
+{"task": "qa9", "i": 17, "condition": "snm_trained", "correct": false, "pred": "Kitchen", "target": "yes", "prompt_tokens": 88, "build_s": 0.16, "answer_s": 0.53}
+{"task": "qa9", "i": 18, "condition": "full_context", "correct": false, "pred": "Not", "target": "no", "prompt_tokens": 481, "build_s": 0.0, "answer_s": 1.6}
+{"task": "qa9", "i": 18, "condition": "rag_topk", "correct": false, "pred": "Not", "target": "no", "prompt_tokens": 291, "build_s": 0.0, "answer_s": 0.99}
+{"task": "qa9", "i": 18, "condition": "summary", "correct": false, "pred": "Sandra", "target": "no", "prompt_tokens": 154, "build_s": 16.38, "answer_s": 0.79}
+{"task": "qa9", "i": 18, "condition": "snm_notes", "correct": false, "pred": "Office", "target": "no", "prompt_tokens": 86, "build_s": 7.17, "answer_s": 0.52}
+{"task": "qa9", "i": 18, "condition": "snm_trained", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 52, "build_s": 0.09, "answer_s": 0.44}
+{"task": "qa9", "i": 19, "condition": "full_context", "correct": false, "pred": "Yes", "target": "no", "prompt_tokens": 743, "build_s": 0.0, "answer_s": 2.18}
+{"task": "qa9", "i": 19, "condition": "rag_topk", "correct": false, "pred": "Hallway", "target": "no", "prompt_tokens": 269, "build_s": 0.0, "answer_s": 1.05}
+{"task": "qa9", "i": 19, "condition": "summary", "correct": false, "pred": "Sandra is not explicitly mentioned in the", "target": "no", "prompt_tokens": 172, "build_s": 19.17, "answer_s": 1.48}
+{"task": "qa9", "i": 19, "condition": "snm_notes", "correct": false, "pred": "older", "target": "no", "prompt_tokens": 94, "build_s": 8.85, "answer_s": 0.56}
+{"task": "qa9", "i": 19, "condition": "snm_trained", "correct": false, "pred": "Yes", "target": "no", "prompt_tokens": 81, "build_s": 0.16, "answer_s": 0.49}
+{"task": "qa9", "i": 20, "condition": "full_context", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 729, "build_s": 0.0, "answer_s": 2.14}
+{"task": "qa9", "i": 20, "condition": "rag_topk", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 290, "build_s": 0.0, "answer_s": 0.96}
+{"task": "qa9", "i": 20, "condition": "summary", "correct": false, "pred": "Kitchen", "target": "no", "prompt_tokens": 172, "build_s": 19.23, "answer_s": 0.7}
+{"task": "qa9", "i": 20, "condition": "snm_notes", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 57, "build_s": 3.9, "answer_s": 0.44}
+{"task": "qa9", "i": 20, "condition": "snm_trained", "correct": false, "pred": "Yes", "target": "no", "prompt_tokens": 90, "build_s": 0.13, "answer_s": 0.51}
+{"task": "qa9", "i": 21, "condition": "full_context", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 740, "build_s": 0.0, "answer_s": 2.19}
+{"task": "qa9", "i": 21, "condition": "rag_topk", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 280, "build_s": 0.0, "answer_s": 0.94}
+{"task": "qa9", "i": 21, "condition": "summary", "correct": false, "pred": "Trapped", "target": "yes", "prompt_tokens": 172, "build_s": 19.29, "answer_s": 0.84}
+{"task": "qa9", "i": 21, "condition": "snm_notes", "correct": false, "pred": "Sandra is not in the hallway.", "target": "yes", "prompt_tokens": 63, "build_s": 4.69, "answer_s": 1.25}
+{"task": "qa9", "i": 21, "condition": "snm_trained", "correct": true, "pred": "Yes.", "target": "yes", "prompt_tokens": 57, "build_s": 0.12, "answer_s": 0.56}
+{"task": "qa9", "i": 22, "condition": "full_context", "correct": false, "pred": "Daniel isn't mentioned in the passage.", "target": "yes", "prompt_tokens": 756, "build_s": 0.0, "answer_s": 3.03}
+{"task": "qa9", "i": 22, "condition": "rag_topk", "correct": false, "pred": "No", "target": "yes", "prompt_tokens": 280, "build_s": 0.0, "answer_s": 0.93}
+{"task": "qa9", "i": 22, "condition": "summary", "correct": false, "pred": "Notepad", "target": "yes", "prompt_tokens": 122, "build_s": 12.74, "answer_s": 0.73}
+{"task": "qa9", "i": 22, "condition": "snm_notes", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 64, "build_s": 4.95, "answer_s": 0.47}
+{"task": "qa9", "i": 22, "condition": "snm_trained", "correct": false, "pred": "Daniel is not in the bedroom.", "target": "yes", "prompt_tokens": 80, "build_s": 0.13, "answer_s": 1.26}
+{"task": "qa9", "i": 23, "condition": "full_context", "correct": false, "pred": "Not", "target": "no", "prompt_tokens": 721, "build_s": 0.0, "answer_s": 2.12}
+{"task": "qa9", "i": 23, "condition": "rag_topk", "correct": false, "pred": "Not", "target": "no", "prompt_tokens": 294, "build_s": 0.0, "answer_s": 0.96}
+{"task": "qa9", "i": 23, "condition": "summary", "correct": false, "pred": "Not", "target": "no", "prompt_tokens": 172, "build_s": 19.24, "answer_s": 0.71}
+{"task": "qa9", "i": 23, "condition": "snm_notes", "correct": true, "pred": "No", "target": "no", "prompt_tokens": 60, "build_s": 4.29, "answer_s": 0.45}
+{"task": "qa9", "i": 23, "condition": "snm_trained", "correct": false, "pred": "Daniel is not in the hallway.", "target": "no", "prompt_tokens": 92, "build_s": 0.14, "answer_s": 1.29}
+{"task": "qa9", "i": 24, "condition": "full_context", "correct": false, "pred": "No", "target": "yes", "prompt_tokens": 744, "build_s": 0.0, "answer_s": 2.22}
+{"task": "qa9", "i": 24, "condition": "rag_topk", "correct": false, "pred": "Bedroom", "target": "yes", "prompt_tokens": 260, "build_s": 0.0, "answer_s": 1.02}
+{"task": "qa9", "i": 24, "condition": "summary", "correct": false, "pred": "Bedroom", "target": "yes", "prompt_tokens": 156, "build_s": 17.33, "answer_s": 0.79}
+{"task": "qa9", "i": 24, "condition": "snm_notes", "correct": false, "pred": "Bedroom", "target": "yes", "prompt_tokens": 172, "build_s": 19.13, "answer_s": 0.83}
+{"task": "qa9", "i": 24, "condition": "snm_trained", "correct": true, "pred": "Yes", "target": "yes", "prompt_tokens": 62, "build_s": 0.1, "answer_s": 0.46}

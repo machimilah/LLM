@@ -1,0 +1,19 @@
+{
+ "persons": [
+  "daniel",
+  "john",
+  "mary",
+  "sandra"
+ ],
+ "targets": [
+  "apple",
+  "bathroom",
+  "bedroom",
+  "football",
+  "garden",
+  "hallway",
+  "kitchen",
+  "milk",
+  "office"
+ ]
+}

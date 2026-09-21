@@ -1,0 +1,14 @@
+device: cpu
+parameters: 388,964 (compiler 25,734, notes 99,008, router 20,866)
+step=250 stage=0 notes=0.111 routed=0.111 detailed=0.111 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=2.096 suff=0.000 n_notes=13.6 overlap=0.000
+step=500 stage=0 notes=0.144 routed=0.144 detailed=0.211 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=1.846 suff=0.014 n_notes=24.0 overlap=0.000
+step=750 stage=0 notes=0.228 routed=0.228 detailed=0.222 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=1.696 suff=0.018 n_notes=24.0 overlap=0.000
+step=1000 stage=0 notes=0.233 routed=0.233 detailed=0.222 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=1.700 suff=0.003 n_notes=24.0 overlap=0.000
+step=1250 stage=0 notes=0.244 routed=0.244 detailed=0.222 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=1.736 suff=0.001 n_notes=24.0 overlap=0.000
+step=1500 stage=0 notes=0.250 routed=0.250 detailed=0.200 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=1.784 suff=0.002 n_notes=24.0 overlap=0.000
+step=1750 stage=0 notes=0.250 routed=0.250 detailed=0.217 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=1.767 suff=0.001 n_notes=24.0 overlap=0.000
+step=2000 stage=0 notes=0.244 routed=0.244 detailed=0.211 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=1.714 suff=0.001 n_notes=24.0 overlap=0.000
+step=2250 stage=0 notes=0.228 routed=0.228 detailed=0.194 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=1.568 suff=0.102 n_notes=24.0 overlap=0.000
+step=2500 stage=0 notes=0.378 routed=0.378 detailed=0.356 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=0.630 suff=0.115 n_notes=24.0 overlap=0.000
+sample notes: [{"anchor": "e20", "micro_context": ". .", "source": 0, "order": 0, "confidence": 0.004334657918661833, "supersedes": 0.01621822454035282}, {"anchor": "value", "micro_context": "v3 v3", "source": 13, "order": 1, "confidence": 0.004916392732411623, "supersedes": 0.020368292927742004}, {"anchor": "speaker", "micro_context": ". .", "source": 27, "order": 2, "confidence": 0.003985395655035973, "supersedes": 0.01615985296666622}, {"anchor": "e0", "micro_context": "v6 v6", "source": 43, "order": 3, "confidence": 0.002445521764457226, "supersedes": 0.010759390890598297}, {"anchor": "e15", "micro_context": ". .", "source": 58, "order": 4, "confidence": 0.004111713729798794, "supersedes": 0.016754252836108208}, {"anchor": "value", "micro_context": "v7 v7", "source": 72, "order": 5, "confidence": 0.0030906673055142164, "supersedes": 0.01554947905242443}]
+seed=1 FINAL notes=0.3778 routed=0.3778 detailed=0.3556 slots=30.0

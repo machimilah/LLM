@@ -1,0 +1,32 @@
+{
+  "model": "snced",
+  "condition": "snm_notes",
+  "dataset": "adversarial_exact_value",
+  "seed": 1,
+  "run_id": "759ba66512b6",
+  "timestamp": "2026-09-20T13:49:16",
+  "git_commit": "uncommitted",
+  "context_length": 0,
+  "parameters": 0,
+  "training_tokens": 0,
+  "note_tokens": 0.0,
+  "note_count": 23.4,
+  "fallback_rate": 0.0,
+  "accuracy": 0.025,
+  "task_success": 0.025,
+  "peak_gpu_memory_mb": 0.0,
+  "peak_host_memory_mb": 0.0,
+  "kv_cache_bytes": 0,
+  "prefill_ms": 0.0,
+  "decode_ms": 0.0,
+  "note_compile_ms": 0.0,
+  "total_task_ms": 0.0,
+  "train_wall_s": 0.0,
+  "estimated_flops": 0,
+  "cost_usd": 0.0,
+  "extra": {
+    "variant": "exact_value",
+    "mean_slots": 23.4,
+    "n_questions": 240
+  }
+}

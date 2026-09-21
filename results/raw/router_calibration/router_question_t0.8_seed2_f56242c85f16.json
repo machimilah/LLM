@@ -1,0 +1,33 @@
+{
+  "model": "snced",
+  "condition": "router_question_t0.8",
+  "dataset": "synthetic_lecture_v1_filler18",
+  "seed": 2,
+  "run_id": "f56242c85f16",
+  "timestamp": "2026-09-20T13:38:49",
+  "git_commit": "uncommitted",
+  "context_length": 0,
+  "parameters": 0,
+  "training_tokens": 0,
+  "note_tokens": 0.0,
+  "note_count": 24.0,
+  "fallback_rate": 0.0,
+  "accuracy": 0.9966666666666667,
+  "task_success": 0.9966666666666667,
+  "peak_gpu_memory_mb": 0.0,
+  "peak_host_memory_mb": 0.0,
+  "kv_cache_bytes": 0,
+  "prefill_ms": 0.0,
+  "decode_ms": 0.0,
+  "note_compile_ms": 0.0,
+  "total_task_ms": 0.0,
+  "train_wall_s": 0.0,
+  "estimated_flops": 0,
+  "cost_usd": 0.0,
+  "extra": {
+    "policy": "question",
+    "threshold": 0.8,
+    "n_filler": 18,
+    "mean_slots": 24.0
+  }
+}

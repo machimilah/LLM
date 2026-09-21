@@ -1,0 +1,40 @@
+{
+  "model": "ced_memory_variant",
+  "condition": "extractive_facts_b",
+  "dataset": "synthetic_lecture_v1_filler18",
+  "seed": 1,
+  "run_id": "673871093e5a",
+  "timestamp": "2026-09-19T20:17:12",
+  "git_commit": "uncommitted",
+  "context_length": 547,
+  "parameters": 243356,
+  "training_tokens": 0,
+  "note_tokens": 0.0,
+  "note_count": 0.0,
+  "fallback_rate": 0.0,
+  "accuracy": 0.21,
+  "task_success": 0.21,
+  "peak_gpu_memory_mb": 0.0,
+  "peak_host_memory_mb": 636.171875,
+  "kv_cache_bytes": 98887,
+  "prefill_ms": 0.0,
+  "decode_ms": 0.0,
+  "note_compile_ms": 0.0,
+  "total_task_ms": 0.0,
+  "train_wall_s": 0.0,
+  "estimated_flops": 302735331,
+  "cost_usd": 0.0,
+  "extra": {
+    "n_filler": 18,
+    "accuracy_by_type": {
+      "direct": 0.2875,
+      "one_hop": 0.1875,
+      "two_hop": 0.155
+    },
+    "memory_slots": 64.38,
+    "retained_tokens": 64.38,
+    "token_budget": 72,
+    "query_conditioned": false,
+    "finetuned_steps": 0
+  }
+}

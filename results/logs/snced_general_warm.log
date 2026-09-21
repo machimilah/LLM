@@ -1,0 +1,14 @@
+device: cpu
+warm-started backbone from ced_baseline_seed2.pt (missing 0, unexpected 0)
+parameters: 145,608 (compiler 25,734, notes 99,008, router 20,866)
+step=250 stage=0 notes=0.083 routed=0.083 detailed=1.000 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=2.227 suff=2.226 n_notes=8.7 overlap=0.032
+step=500 stage=0 notes=0.406 routed=0.406 detailed=1.000 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=0.042 suff=0.041 n_notes=23.0 overlap=0.021
+step=544 advance to stage 1: [0, [0, 1]]
+step=699 advance to stage 2: [6, [0, 1, 2]]
+step=750 stage=2 notes=0.994 routed=0.994 detailed=1.000 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=0.011 suff=0.011 n_notes=30.0 overlap=0.007
+step=801 decoder unfrozen
+step=1000 stage=2 notes=1.000 routed=1.000 detailed=1.000 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=0.004 suff=0.004 n_notes=30.0 overlap=0.001
+step=1250 stage=2 notes=1.000 routed=1.000 detailed=1.000 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=0.000 suff=0.000 n_notes=30.0 overlap=0.001
+step=1299 stage=2 notes=1.000 routed=1.000 detailed=1.000 | slots=30.0 routed_slots=30.0 fired=0.00 | L_notes=0.000 suff=0.000 n_notes=30.0 overlap=0.001
+sample notes: [{"anchor": "v2", "micro_context": "the value", "source": 0, "order": 0, "confidence": 0.3528229892253876, "supersedes": 0.10705092549324036}, {"anchor": "v6", "micro_context": "this this", "source": 14, "order": 1, "confidence": 0.3629732131958008, "supersedes": 0.1226864606142044}, {"anchor": "e12", "micro_context": "the the", "source": 31, "order": 2, "confidence": 0.35984641313552856, "supersedes": 0.1116681769490242}, {"anchor": "e7", "micro_context": "on speaker", "source": 45, "order": 3, "confidence": 0.36062145233154297, "supersedes": 0.11638642102479935}, {"anchor": "of", "micro_context": "the the", "source": 61, "order": 4, "confidence": 0.37093687057495117, "supersedes": 0.13404420018196106}, {"anchor": "lower", "micro_context": "the the", "source": 72, "order": 5, "confidence": 0.3712180256843567, "supersedes": 0.1312606930732727}]
+seed=2 FINAL notes=1.0000 routed=1.0000 detailed=1.0000 slots=30.0

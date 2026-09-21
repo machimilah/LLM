@@ -1,0 +1,10 @@
+seed=456 iterative_rag  acc=1.0000 active=40.25 fallback=0.000 params=42016 wall=84.2s
+seed=456 snm            acc=1.0000 active=17.00 fallback=0.000 params=42016 wall=34.4s
+seed=456 snm_noisy      acc=0.8042 active=16.56 fallback=0.000 params=42016 wall=34.3s
+seed=456 snm_fallback   acc=1.0000 active=19.65 fallback=0.221 params=42016 wall=47.3s
+seed=456 word_only      acc=0.1271 active=13.00 fallback=0.000 params=42016 wall=26.7s
+seed=789 iterative_rag  acc=1.0000 active=40.21 fallback=0.000 params=42016 wall=84.8s
+seed=789 snm            acc=1.0000 active=17.00 fallback=0.000 params=42016 wall=36.2s
+seed=789 snm_noisy      acc=0.7875 active=16.55 fallback=0.000 params=42016 wall=36.4s
+seed=789 snm_fallback   acc=1.0000 active=19.73 fallback=0.227 params=42016 wall=56.9s
+seed=789 word_only      acc=0.0979 active=13.00 fallback=0.000 params=42016 wall=30.8s

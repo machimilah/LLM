@@ -1,0 +1,84 @@
+seed=1 fine-tuning snm_keyword_only
+    snm_keyword_only step=200 loss=2.4853
+    snm_keyword_only step=400 loss=2.4566
+seed=1 fine-tuning snm_phrase_only
+    snm_phrase_only step=200 loss=2.1272
+    snm_phrase_only step=400 loss=2.0079
+seed=1 filler=18 T=548 (43s)
+  full_context        acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=547.8 tokens=547.8 GFLOPs=0.491 fallback=0.000
+  sliding_window      acc=0.1667 {'direct': 0.2075, 'one_hop': 0.145, 'two_hop': 0.1475} slots=72.0 tokens=72.0 GFLOPs=0.158 fallback=0.000
+  rag_topk            acc=0.4417 {'direct': 0.9875, 'one_hop': 0.1125, 'two_hop': 0.225} slots=44.2 tokens=44.2 GFLOPs=0.142 fallback=0.000
+  iterative_rag       acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=184.9 tokens=184.9 GFLOPs=0.226 fallback=0.000
+  extractive_facts    acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=351.4 tokens=351.4 GFLOPs=0.489 fallback=0.000
+  extractive_facts_b  acc=0.2100 {'direct': 0.2875, 'one_hop': 0.1875, 'two_hop': 0.155} slots=64.4 tokens=64.4 GFLOPs=0.303 fallback=0.000
+  snm_notes           acc=0.9883 {'direct': 0.9875, 'one_hop': 0.9825, 'two_hop': 0.995} slots=24.0 tokens=72.0 GFLOPs=0.279 fallback=0.000
+  snm_keyword_only    acc=0.1200 {'direct': 0.125, 'one_hop': 0.1225, 'two_hop': 0.1125} slots=24.0 tokens=72.0 GFLOPs=0.279 fallback=0.000
+  snm_phrase_only     acc=0.2733 {'direct': 0.27, 'one_hop': 0.2575, 'two_hop': 0.2925} slots=24.0 tokens=72.0 GFLOPs=0.279 fallback=0.000
+  snm_fallback        acc=0.9975 {'direct': 0.9975, 'one_hop': 0.995, 'two_hop': 1.0} slots=308.7 tokens=330.5 GFLOPs=0.423 fallback=0.545
+seed=1 filler=108 T=1529 (88s)
+  full_context        acc=0.9925 {'direct': 1.0, 'one_hop': 0.99, 'two_hop': 0.9875} slots=1528.8 tokens=1528.8 GFLOPs=1.543 fallback=0.000
+  sliding_window      acc=0.1450 {'direct': 0.1725, 'one_hop': 0.1425, 'two_hop': 0.12} slots=72.0 tokens=72.0 GFLOPs=0.158 fallback=0.000
+  rag_topk            acc=0.4350 {'direct': 0.98, 'one_hop': 0.115, 'two_hop': 0.21} slots=51.0 tokens=51.0 GFLOPs=0.146 fallback=0.000
+  iterative_rag       acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=228.5 tokens=228.5 GFLOPs=0.254 fallback=0.000
+  extractive_facts    acc=0.9992 {'direct': 1.0, 'one_hop': 0.9975, 'two_hop': 1.0} slots=363.7 tokens=363.7 GFLOPs=1.149 fallback=0.000
+  extractive_facts_b  acc=0.2075 {'direct': 0.32, 'one_hop': 0.1625, 'two_hop': 0.14} slots=64.4 tokens=64.4 GFLOPs=0.954 fallback=0.000
+  snm_notes           acc=0.8883 {'direct': 0.9225, 'one_hop': 0.89, 'two_hop': 0.8525} slots=25.1 tokens=75.3 GFLOPs=0.931 fallback=0.000
+  snm_keyword_only    acc=0.1175 {'direct': 0.1175, 'one_hop': 0.115, 'two_hop': 0.12} slots=25.1 tokens=75.3 GFLOPs=0.931 fallback=0.000
+  snm_phrase_only     acc=0.2750 {'direct': 0.2725, 'one_hop': 0.2875, 'two_hop': 0.265} slots=25.1 tokens=75.3 GFLOPs=0.931 fallback=0.000
+  snm_fallback        acc=0.9908 {'direct': 0.9975, 'one_hop': 0.99, 'two_hop': 0.985} slots=1446.0 tokens=1448.7 GFLOPs=1.651 fallback=0.945
+seed=2 fine-tuning snm_keyword_only
+    snm_keyword_only step=200 loss=2.6335
+    snm_keyword_only step=400 loss=2.6180
+seed=2 fine-tuning snm_phrase_only
+    snm_phrase_only step=200 loss=2.2751
+    snm_phrase_only step=400 loss=2.2702
+seed=2 filler=18 T=548 (35s)
+  full_context        acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=548.1 tokens=548.1 GFLOPs=0.491 fallback=0.000
+  sliding_window      acc=0.1900 {'direct': 0.2525, 'one_hop': 0.1675, 'two_hop': 0.15} slots=72.0 tokens=72.0 GFLOPs=0.158 fallback=0.000
+  rag_topk            acc=0.4558 {'direct': 0.99, 'one_hop': 0.1575, 'two_hop': 0.22} slots=44.4 tokens=44.4 GFLOPs=0.142 fallback=0.000
+  iterative_rag       acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=183.8 tokens=183.8 GFLOPs=0.225 fallback=0.000
+  extractive_facts    acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=351.5 tokens=351.5 GFLOPs=0.489 fallback=0.000
+  extractive_facts_b  acc=0.2100 {'direct': 0.2925, 'one_hop': 0.175, 'two_hop': 0.1625} slots=64.2 tokens=64.2 GFLOPs=0.303 fallback=0.000
+  snm_notes           acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=24.0 tokens=72.0 GFLOPs=0.279 fallback=0.000
+  snm_keyword_only    acc=0.1200 {'direct': 0.1025, 'one_hop': 0.115, 'two_hop': 0.1425} slots=24.0 tokens=72.0 GFLOPs=0.279 fallback=0.000
+  snm_phrase_only     acc=0.2633 {'direct': 0.2325, 'one_hop': 0.275, 'two_hop': 0.2825} slots=24.0 tokens=72.0 GFLOPs=0.279 fallback=0.000
+  snm_fallback        acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=42.4 tokens=88.8 GFLOPs=0.288 fallback=0.035
+seed=2 filler=108 T=1529 (73s)
+  full_context        acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=1529.5 tokens=1529.5 GFLOPs=1.544 fallback=0.000
+  sliding_window      acc=0.1242 {'direct': 0.1375, 'one_hop': 0.13, 'two_hop': 0.105} slots=72.0 tokens=72.0 GFLOPs=0.158 fallback=0.000
+  rag_topk            acc=0.4300 {'direct': 0.975, 'one_hop': 0.1125, 'two_hop': 0.2025} slots=50.5 tokens=50.5 GFLOPs=0.145 fallback=0.000
+  iterative_rag       acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=228.6 tokens=228.6 GFLOPs=0.254 fallback=0.000
+  extractive_facts    acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=351.5 tokens=351.5 GFLOPs=1.141 fallback=0.000
+  extractive_facts_b  acc=0.2358 {'direct': 0.34, 'one_hop': 0.2075, 'two_hop': 0.16} slots=64.7 tokens=64.7 GFLOPs=0.955 fallback=0.000
+  snm_notes           acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=24.0 tokens=72.0 GFLOPs=0.931 fallback=0.000
+  snm_keyword_only    acc=0.1500 {'direct': 0.1575, 'one_hop': 0.1625, 'two_hop': 0.13} slots=24.0 tokens=72.0 GFLOPs=0.931 fallback=0.000
+  snm_phrase_only     acc=0.2717 {'direct': 0.3025, 'one_hop': 0.2425, 'two_hop': 0.27} slots=24.0 tokens=72.0 GFLOPs=0.931 fallback=0.000
+  snm_fallback        acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=39.2 tokens=86.7 GFLOPs=0.939 fallback=0.010
+seed=3 fine-tuning snm_keyword_only
+    snm_keyword_only step=200 loss=2.5727
+    snm_keyword_only step=400 loss=2.4246
+seed=3 fine-tuning snm_phrase_only
+    snm_phrase_only step=200 loss=2.0499
+    snm_phrase_only step=400 loss=1.8809
+seed=3 filler=18 T=546 (35s)
+  full_context        acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=546.5 tokens=546.5 GFLOPs=0.490 fallback=0.000
+  sliding_window      acc=0.1917 {'direct': 0.2425, 'one_hop': 0.17, 'two_hop': 0.1625} slots=72.0 tokens=72.0 GFLOPs=0.158 fallback=0.000
+  rag_topk            acc=0.4250 {'direct': 0.99, 'one_hop': 0.1325, 'two_hop': 0.1525} slots=44.3 tokens=44.3 GFLOPs=0.142 fallback=0.000
+  iterative_rag       acc=0.9992 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 0.9975} slots=186.9 tokens=186.9 GFLOPs=0.227 fallback=0.000
+  extractive_facts    acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=350.7 tokens=350.7 GFLOPs=0.488 fallback=0.000
+  extractive_facts_b  acc=0.1950 {'direct': 0.2625, 'one_hop': 0.16, 'two_hop': 0.1625} slots=64.5 tokens=64.5 GFLOPs=0.302 fallback=0.000
+  snm_notes           acc=0.9942 {'direct': 0.9975, 'one_hop': 0.995, 'two_hop': 0.99} slots=24.0 tokens=72.0 GFLOPs=0.278 fallback=0.000
+  snm_keyword_only    acc=0.1292 {'direct': 0.1275, 'one_hop': 0.1175, 'two_hop': 0.1425} slots=24.0 tokens=72.0 GFLOPs=0.278 fallback=0.000
+  snm_phrase_only     acc=0.2700 {'direct': 0.2675, 'one_hop': 0.2825, 'two_hop': 0.26} slots=24.0 tokens=72.0 GFLOPs=0.278 fallback=0.000
+  snm_fallback        acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=319.4 tokens=340.3 GFLOPs=0.428 fallback=0.565
+seed=3 filler=108 T=1525 (76s)
+  full_context        acc=0.9492 {'direct': 1.0, 'one_hop': 0.945, 'two_hop': 0.9025} slots=1525.2 tokens=1525.2 GFLOPs=1.538 fallback=0.000
+  sliding_window      acc=0.1275 {'direct': 0.145, 'one_hop': 0.115, 'two_hop': 0.1225} slots=72.0 tokens=72.0 GFLOPs=0.158 fallback=0.000
+  rag_topk            acc=0.4167 {'direct': 0.965, 'one_hop': 0.115, 'two_hop': 0.17} slots=50.6 tokens=50.6 GFLOPs=0.145 fallback=0.000
+  iterative_rag       acc=0.9992 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 0.9975} slots=227.1 tokens=227.1 GFLOPs=0.253 fallback=0.000
+  extractive_facts    acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=353.6 tokens=353.6 GFLOPs=1.139 fallback=0.000
+  extractive_facts_b  acc=0.1975 {'direct': 0.2825, 'one_hop': 0.1725, 'two_hop': 0.1375} slots=64.8 tokens=64.8 GFLOPs=0.951 fallback=0.000
+  snm_notes           acc=0.9275 {'direct': 0.99, 'one_hop': 0.935, 'two_hop': 0.8575} slots=24.2 tokens=72.7 GFLOPs=0.927 fallback=0.000
+  snm_keyword_only    acc=0.1300 {'direct': 0.13, 'one_hop': 0.115, 'two_hop': 0.145} slots=24.2 tokens=72.7 GFLOPs=0.927 fallback=0.000
+  snm_phrase_only     acc=0.2825 {'direct': 0.2875, 'one_hop': 0.2925, 'two_hop': 0.2675} slots=24.2 tokens=72.7 GFLOPs=0.927 fallback=0.000
+  snm_fallback        acc=0.9475 {'direct': 1.0, 'one_hop': 0.9425, 'two_hop': 0.9} slots=1405.3 tokens=1409.1 GFLOPs=1.627 fallback=0.920

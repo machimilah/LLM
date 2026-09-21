@@ -1,0 +1,24 @@
+# Historical proof-of-concept experiments (plan sections 11.1 and 11.2).
+data:
+  n_entities: 12
+  n_filler: 18
+
+ablation:            # Experiment A: representation and fallback ablation
+  seeds: [123, 456, 789]
+  n_train: 1280
+  n_val: 240
+  n_test: 480
+  noise_p: 0.2
+  epochs: 40
+  batch_size: 64
+  lr: 0.003
+  exposure_questions: 100
+
+compiler:            # Experiment B: learned query-independent note compiler
+  seeds: [11, 22, 33]
+  n_train_docs: 320
+  n_test_docs: 120
+  queries_per_type: 4
+  epochs: 30
+  batch_size: 128
+  lr: 0.003

@@ -1,0 +1,63 @@
+{
+  "model": "snced",
+  "condition": "snced_gold_notes",
+  "dataset": "synthetic_lecture_v1_filler216",
+  "seed": 2,
+  "run_id": "eb1bbe8d7fe2",
+  "timestamp": "2026-09-19T21:07:30",
+  "git_commit": "uncommitted",
+  "context_length": 2705,
+  "parameters": 445079,
+  "training_tokens": 4954289,
+  "note_tokens": 72.0,
+  "note_count": 24.0,
+  "fallback_rate": 0.0,
+  "accuracy": 0.9991666666666666,
+  "task_success": 0.9991666666666666,
+  "peak_gpu_memory_mb": 0.0,
+  "peak_host_memory_mb": 2177.3359375,
+  "kv_cache_bytes": 36864,
+  "prefill_ms": 58.040393499977654,
+  "decode_ms": 1.1941229165677214,
+  "note_compile_ms": 58.040393499977654,
+  "total_task_ms": 101.02881849641562,
+  "train_wall_s": 891.1285965999996,
+  "estimated_flops": 2361789858,
+  "cost_usd": 0.0,
+  "extra": {
+    "n_filler": 216,
+    "accuracy_by_type": {
+      "direct": 1.0,
+      "one_hop": 0.9975,
+      "two_hop": 1.0
+    },
+    "memory_slots": 24.0,
+    "compiler_exact_chunk_extraction": 1.0,
+    "compiler_training": {
+      "steps": 600,
+      "val_extraction": 1.0,
+      "passed_gate": true
+    },
+    "decoder_training": {
+      "tokens": 4954289,
+      "steps": 500,
+      "val_gold_notes": 0.9958333373069763,
+      "val_detailed": 1.0,
+      "passed_gate": true
+    },
+    "note_mode": "note_slots",
+    "note_encoder_parameters": 49472,
+    "compiler_parameters": 152251,
+    "fallback_threshold": 0.9,
+    "flops_workload_queries": 36,
+    "trained_filler": 18,
+    "compiler_train_fillers": [
+      0,
+      18,
+      36,
+      54,
+      72
+    ],
+    "note_supervision": "gold chunk labels (extra supervision the baseline does not get)"
+  }
+}

@@ -1,0 +1,40 @@
+seed=1 filler=18 full_context   acc=0.9972 slots=546.2 build=2.5ms answer=1.46ms task=55ms
+seed=1 filler=18 snm_notes      acc=0.9833 slots=24.0 build=7.5ms answer=0.88ms task=39ms
+seed=1 filler=18 snm_fallback   acc=0.9917 slots=35.6 build=5.3ms answer=1.31ms task=52ms
+seed=1 filler=108 full_context   acc=0.9972 slots=1528.3 build=9.4ms answer=2.72ms task=107ms
+seed=1 filler=108 snm_notes      acc=0.9500 slots=24.0 build=17.3ms answer=0.90ms task=50ms
+seed=1 filler=108 snm_fallback   acc=0.9750 slots=78.5 build=18.1ms answer=2.50ms task=108ms
+seed=2 filler=18 full_context   acc=1.0000 slots=548.0 build=2.4ms answer=1.36ms task=51ms
+seed=2 filler=18 snm_notes      acc=0.9944 slots=24.0 build=5.5ms answer=0.96ms task=40ms
+seed=2 filler=18 snm_fallback   acc=0.9944 slots=24.0 build=5.8ms answer=1.48ms task=59ms
+seed=2 filler=108 full_context   acc=1.0000 slots=1530.1 build=8.6ms answer=2.39ms task=95ms
+seed=2 filler=108 snm_notes      acc=1.0000 slots=24.0 build=17.5ms answer=0.97ms task=52ms
+seed=2 filler=108 snm_fallback   acc=1.0000 slots=24.0 build=17.1ms answer=2.28ms task=99ms
+seed=3 filler=18 full_context   acc=1.0000 slots=546.3 build=2.6ms answer=1.50ms task=57ms
+seed=3 filler=18 snm_notes      acc=0.9778 slots=24.0 build=5.6ms answer=0.93ms task=39ms
+seed=3 filler=18 snm_fallback   acc=0.9806 slots=32.8 build=6.0ms answer=1.64ms task=65ms
+seed=3 filler=108 full_context   acc=0.9361 slots=1525.1 build=10.6ms answer=3.10ms task=122ms
+seed=3 filler=108 snm_notes      acc=0.9278 slots=24.2 build=17.7ms answer=0.97ms task=53ms
+seed=3 filler=108 snm_fallback   acc=0.9278 slots=153.4 build=18.1ms answer=2.56ms task=110ms
+# Timing and cost per successful task
+
+Seeds: [1, 2, 3]. One condition at a time on an otherwise idle machine, after warm-up.
+A task = one document + 36 questions, so memory building is amortised.
+Device: cpu.
+
+## 18 filler chunks
+
+| Condition | Accuracy | Slots | Build ms/doc | Answer ms/q | Task ms | ms / successful task | GFLOPs / successful task |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| full_context | 99.91% | 546.8 | 2.5 | 1.44 | 54 | 55 | 0.490 |
+| snm_notes | 98.52% | 24.0 | 6.2 | 0.92 | 39 | 40 | 0.283 |
+| snm_fallback | 98.89% | 30.8 | 5.7 | 1.48 | 59 | 60 | 0.285 |
+
+## 108 filler chunks
+
+| Condition | Accuracy | Slots | Build ms/doc | Answer ms/q | Task ms | ms / successful task | GFLOPs / successful task |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| full_context | 97.78% | 1527.8 | 9.5 | 2.74 | 108 | 111 | 1.578 |
+| snm_notes | 95.93% | 24.1 | 17.5 | 0.94 | 52 | 54 | 0.970 |
+| snm_fallback | 96.76% | 85.3 | 17.8 | 2.45 | 106 | 110 | 0.995 |
+

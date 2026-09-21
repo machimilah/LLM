@@ -1,0 +1,41 @@
+{
+  "model": "gru_note_compiler",
+  "condition": "learned_compiler",
+  "dataset": "synthetic_lecture_v1",
+  "seed": 33,
+  "run_id": "8ff047f40080",
+  "timestamp": "2026-09-18T15:19:50",
+  "git_commit": "uncommitted",
+  "context_length": 546,
+  "parameters": 22823,
+  "training_tokens": 5255160,
+  "note_tokens": 72.0,
+  "note_count": 24.0,
+  "fallback_rate": 0.0,
+  "accuracy": 1.0,
+  "task_success": 1.0,
+  "peak_gpu_memory_mb": 0.0,
+  "peak_host_memory_mb": 311.01171875,
+  "kv_cache_bytes": 0,
+  "prefill_ms": 0.0,
+  "decode_ms": 0.0,
+  "note_compile_ms": 9.139504165917364,
+  "total_task_ms": 0.0,
+  "train_wall_s": 74.95078970000031,
+  "estimated_flops": 0,
+  "cost_usd": 0.0,
+  "extra": {
+    "raw_tokens": 546.6916666666667,
+    "raw_slots": 42.0,
+    "text_token_reduction": 0.8682987058518665,
+    "slot_reduction": 0.4285714285714286,
+    "exact_chunk_extraction": 1.0,
+    "recovery_by_type": {
+      "direct": 1.0,
+      "one_hop": 1.0,
+      "two_hop": 1.0
+    },
+    "reader": "deterministic_graph_traversal",
+    "query_independent": true
+  }
+}

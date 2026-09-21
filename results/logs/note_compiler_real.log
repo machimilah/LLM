@@ -1,0 +1,17 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5265.50it/s]
+building training documents (WikiText noise)...
+Repo card metadata block was not found. Setting CardData to empty.
+Repo card metadata block was not found. Setting CardData to empty.
+  80048 train sentences (27698 facts), 5335 val
+  encoded in 379s
+  epoch 1: loss 0.1968 val fact_acc 0.9964 tuple_acc 0.9843
+  epoch 2: loss 0.0343 val fact_acc 0.9987 tuple_acc 0.9821
+  epoch 3: loss 0.0344 val fact_acc 0.9991 tuple_acc 0.9821
+  epoch 4: loss 0.0021 val fact_acc 0.9994 tuple_acc 0.9843
+  epoch 5: loss 0.0817 val fact_acc 0.9993 tuple_acc 0.9886
+  epoch 6: loss 0.0399 val fact_acc 0.9996 tuple_acc 0.9859
+evaluating on real BABILong documents (book-text noise, unseen corpus)...
+  qa1: retention 88.0% (gold 100.0%) | fact P 83.1 R 96.0 | notes 20 tok vs 485 (4.2%)
+  qa2: retention 90.0% (gold 100.0%) | fact P 93.3 R 97.1 | notes 49 tok vs 495 (10.0%)
+  qa9: retention 92.0% (gold 100.0%) | fact P 83.3 R 93.4 | notes 22 tok vs 479 (4.6%)

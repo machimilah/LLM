@@ -1,0 +1,11 @@
+device: cpu
+parameters: 384,867 (compiler 25,734, notes 99,008, router 16,769)
+step=250 stage=0 notes=0.125 routed=0.125 detailed=0.125 | slots=42.0 fired=0.00 | L_notes=2.096 suff=0.000 n_notes=10.3
+step=500 stage=0 notes=0.242 routed=0.242 detailed=0.112 | slots=42.0 fired=0.00 | L_notes=1.811 suff=0.213 n_notes=12.0
+step=750 stage=0 notes=0.218 routed=0.218 detailed=0.100 | slots=42.0 fired=0.00 | L_notes=1.743 suff=0.319 n_notes=12.0
+step=1000 stage=0 notes=0.223 routed=0.223 detailed=0.107 | slots=42.0 fired=0.00 | L_notes=1.758 suff=0.307 n_notes=12.0
+step=1250 stage=0 notes=0.212 routed=0.212 detailed=0.117 | slots=42.0 fired=0.00 | L_notes=1.791 suff=0.326 n_notes=12.0
+step=1500 stage=0 notes=0.245 routed=0.245 detailed=0.112 | slots=42.0 fired=0.00 | L_notes=1.834 suff=0.303 n_notes=12.0
+step=1750 stage=0 notes=0.208 routed=0.208 detailed=0.112 | slots=42.0 fired=0.00 | L_notes=1.811 suff=0.283 n_notes=12.0
+step=2000 stage=0 notes=0.213 routed=0.213 detailed=0.112 | slots=42.0 fired=0.00 | L_notes=1.786 suff=0.426 n_notes=12.0
+step=2250 stage=0 notes=0.230 routed=0.230 detailed=0.113 | slots=42.0 fired=0.00 | L_notes=1.715 suff=0.303 n_notes=12.0

@@ -1,0 +1,25 @@
+# Mandatory memory-representation ablations (plan section 15, Phase 4).
+# Every condition is evaluated with the SAME encoder, decoder and harness,
+# using the SN-CED checkpoints trained by snced_compare.py.
+base_config: ced_baseline_gen.yaml
+snced_config: snced.yaml
+
+eval:
+  fillers: [18, 108]        # trained length, and 3x longer
+  n_docs: 200
+  queries_per_type: 2
+  workload_queries_per_lecture: 36
+
+budget:
+  # SNM keeps 24 notes = 72 note tokens. Text-based conditions get the same
+  # textual budget so "at equivalent memory budgets" is meaningful.
+  tokens: 72
+  rag_top_k: 6              # capped by the token budget
+  iterative_rag_rounds: 3   # one per hop of the hardest question type
+
+# Note-content ablations run through the note encoder, so each gets its own
+# short fine-tune (decoder + note encoder) to avoid punishing distribution shift.
+content_ablation:
+  steps: 400
+  lr: 0.0003
+  lectures_per_batch: 16

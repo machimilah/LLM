@@ -1,0 +1,33 @@
+{
+  "model": "snced",
+  "condition": "router_lecture_t0.0",
+  "dataset": "synthetic_lecture_v1_filler108",
+  "seed": 2,
+  "run_id": "74352e47f3f9",
+  "timestamp": "2026-09-20T13:38:49",
+  "git_commit": "uncommitted",
+  "context_length": 0,
+  "parameters": 0,
+  "training_tokens": 0,
+  "note_tokens": 0.0,
+  "note_count": 24.0,
+  "fallback_rate": 0.0,
+  "accuracy": 1.0,
+  "task_success": 1.0,
+  "peak_gpu_memory_mb": 0.0,
+  "peak_host_memory_mb": 0.0,
+  "kv_cache_bytes": 0,
+  "prefill_ms": 0.0,
+  "decode_ms": 0.0,
+  "note_compile_ms": 0.0,
+  "total_task_ms": 0.0,
+  "train_wall_s": 0.0,
+  "estimated_flops": 0,
+  "cost_usd": 0.0,
+  "extra": {
+    "policy": "lecture",
+    "threshold": 0.0,
+    "n_filler": 108,
+    "mean_slots": 24.0
+  }
+}

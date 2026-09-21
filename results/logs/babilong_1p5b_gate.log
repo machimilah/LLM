@@ -1,0 +1,54 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<01:48,  3.10it/s]Loading weights:  40%|####      | 136/338 [00:00<00:00, 411.67it/s]Loading weights:  63%|######3   | 213/338 [00:00<00:00, 370.44it/s]Loading weights:  80%|#######9  | 270/338 [00:01<00:00, 199.62it/s]Loading weights:  91%|#########1| 309/338 [00:02<00:00, 95.80it/s] Loading weights:  99%|#########9| 335/338 [00:02<00:00, 98.91it/s]Loading weights: 100%|##########| 338/338 [00:02<00:00, 133.40it/s]
+qa1 1/25 full_context=1/1
+qa1 2/25 full_context=2/2
+qa1 3/25 full_context=3/3
+qa1 4/25 full_context=4/4
+qa1 5/25 full_context=5/5
+qa1 6/25 full_context=6/6
+qa1 7/25 full_context=6/7
+qa1 8/25 full_context=6/8
+qa1 9/25 full_context=7/9
+qa1 10/25 full_context=7/10
+qa1 11/25 full_context=7/11
+qa1 12/25 full_context=7/12
+qa1 13/25 full_context=7/13
+qa1 14/25 full_context=7/14
+qa1 15/25 full_context=7/15
+qa1 16/25 full_context=8/16
+qa1 17/25 full_context=9/17
+qa1 18/25 full_context=9/18
+qa1 19/25 full_context=9/19
+qa1 20/25 full_context=9/20
+qa1 21/25 full_context=9/21
+qa1 22/25 full_context=10/22
+qa1 23/25 full_context=10/23
+qa1 24/25 full_context=11/24
+qa1 25/25 full_context=12/25
+  qa1 full_context  acc=0.480 prompt_tokens=710 build_ms=0 answer_ms=6564
+qa2 1/25 full_context=1/1
+qa2 2/25 full_context=2/2
+qa2 3/25 full_context=3/3
+qa2 4/25 full_context=3/4
+qa2 5/25 full_context=4/5
+qa2 6/25 full_context=4/6
+qa2 7/25 full_context=4/7
+qa2 8/25 full_context=4/8
+qa2 9/25 full_context=4/9
+qa2 10/25 full_context=4/10
+qa2 11/25 full_context=4/11
+qa2 12/25 full_context=4/12
+qa2 13/25 full_context=4/13
+qa2 14/25 full_context=5/14
+qa2 15/25 full_context=5/15
+qa2 16/25 full_context=5/16
+qa2 17/25 full_context=5/17
+qa2 18/25 full_context=5/18
+qa2 19/25 full_context=6/19
+qa2 20/25 full_context=7/20
+qa2 21/25 full_context=7/21
+qa2 22/25 full_context=7/22
+qa2 23/25 full_context=8/23
+qa2 24/25 full_context=8/24
+qa2 25/25 full_context=8/25
+  qa2 full_context  acc=0.320 prompt_tokens=709 build_ms=0 answer_ms=6623

@@ -1,0 +1,3 @@
+{"n_dec":5,"conv_kernel":6} 250 direct=0.237 one_hop=0.233 t=199s
+{"n_dec":5,"conv_kernel":6} 500 direct=0.277 one_hop=0.280 t=413s
+{"n_dec":5,"conv_kernel":6} 750 direct=0.280 one_hop=0.287 t=619s

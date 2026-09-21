@@ -1,0 +1,30 @@
+step=250 stage=0 loss=2.0600 acc=0.1792 {'direct': 0.21, 'one_hop': 0.1725, 'two_hop': 0.155}
+step=500 stage=0 loss=1.8484 acc=0.1742 {'direct': 0.2425, 'one_hop': 0.135, 'two_hop': 0.145}
+step=750 stage=0 loss=1.7476 acc=0.1792 {'direct': 0.255, 'one_hop': 0.14, 'two_hop': 0.1425}
+step=1000 stage=0 loss=1.7681 acc=0.1783 {'direct': 0.2575, 'one_hop': 0.14, 'two_hop': 0.1375}
+step=1250 stage=0 loss=1.3273 acc=0.2300 {'direct': 0.4175, 'one_hop': 0.1225, 'two_hop': 0.15}
+step=1374 advance to stage 1: [0, [0, 1]]
+step=1500 stage=1 loss=1.0648 acc=0.4650 {'direct': 0.9975, 'one_hop': 0.22, 'two_hop': 0.1775}
+step=1750 stage=1 loss=0.9845 acc=0.4658 {'direct': 1.0, 'one_hop': 0.24, 'two_hop': 0.1575}
+step=2000 stage=1 loss=0.8085 acc=0.4975 {'direct': 0.9975, 'one_hop': 0.3125, 'two_hop': 0.1825}
+step=2250 stage=1 loss=0.7118 acc=0.5075 {'direct': 1.0, 'one_hop': 0.365, 'two_hop': 0.1575}
+step=2500 stage=1 loss=0.4845 acc=0.5533 {'direct': 1.0, 'one_hop': 0.505, 'two_hop': 0.155}
+step=2720 advance to stage 2: [0, [0, 1, 2]]
+step=2750 stage=2 loss=0.9754 acc=0.6350 {'direct': 0.995, 'one_hop': 0.8525, 'two_hop': 0.0575}
+step=2899 advance to stage 3: [6, [0, 1, 2]]
+step=2949 advance to stage 4: [12, [0, 1, 2]]
+step=2999 advance to stage 5: [18, [0, 1, 2]]
+step=3000 stage=5 loss=0.0313 acc=0.9825 {'direct': 0.9975, 'one_hop': 0.985, 'two_hop': 0.965}
+step=3250 stage=5 loss=0.0112 acc=0.9942 {'direct': 0.995, 'one_hop': 1.0, 'two_hop': 0.9875}
+step=3500 stage=5 loss=0.0314 acc=0.9983 {'direct': 1.0, 'one_hop': 0.9975, 'two_hop': 0.9975}
+step=3750 stage=5 loss=0.0045 acc=0.9975 {'direct': 1.0, 'one_hop': 0.9975, 'two_hop': 0.995}
+step=4000 stage=5 loss=0.0023 acc=0.9975 {'direct': 1.0, 'one_hop': 0.995, 'two_hop': 0.9975}
+step=4250 stage=5 loss=0.0012 acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0}
+step=4500 stage=5 loss=0.0003 acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0}
+step=4750 stage=5 loss=0.0005 acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0}
+step=5000 stage=5 loss=0.0002 acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0}
+step=5250 stage=5 loss=0.0002 acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0}
+step=5500 stage=5 loss=0.0002 acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0}
+step=5750 stage=5 loss=0.0001 acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0}
+step=5999 stage=5 loss=0.0002 acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0}
+seed=3 FINAL acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} healthy=True

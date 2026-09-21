@@ -1,0 +1,42 @@
+# P2: small Causal Encoder-Decoder baseline. Must reach >= 95% per question
+# type on the controlled synthetic task before any SNM comparison (Rule 2).
+data:
+  n_entities: 12
+  n_filler: 18
+
+model:
+  d_model: 64
+  n_heads: 4
+  n_enc: 2
+  n_dec: 3
+  d_ff: 128
+  conv_kernel: 6     # short causal conv in encoder blocks; see FAILED_RUNS.md
+
+train:
+  seeds: [1]
+  lectures_per_batch: 16
+  # Multi-query training: every lecture is encoded once and decoded against a
+  # question for every entity and every active question type.
+  lr: 0.001
+  warmup: 200
+  weight_decay: 0.01
+  grad_clip: 1.0
+  eval_every: 250
+  max_steps: 20000
+  # Adaptive curriculum over question types, then distractor length. Advance
+  # when running training accuracy over `advance_window` steps exceeds `advance_at`.
+  advance_at: 0.95
+  advance_window: 50
+  final_stage_steps: 3000   # cosine LR decay to zero over the final stage
+  curriculum:               # [n_filler, question types]
+    - [0, [0]]
+    - [0, [0, 1]]
+    - [0, [0, 1, 2]]
+    - [6, [0, 1, 2]]
+    - [12, [0, 1, 2]]
+    - [18, [0, 1, 2]]
+
+eval:
+  n_docs: 200
+  queries_per_type: 2
+  target_accuracy: 0.95

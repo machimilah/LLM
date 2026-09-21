@@ -1,0 +1,39 @@
+{
+  "model": "gru_reasoner",
+  "condition": "word_only",
+  "dataset": "synthetic_lecture_v1",
+  "seed": 789,
+  "run_id": "0344f5ee337d",
+  "timestamp": "2026-09-18T15:27:56",
+  "git_commit": "uncommitted",
+  "context_length": 547,
+  "parameters": 42016,
+  "training_tokens": 716640,
+  "note_tokens": 0.0,
+  "note_count": 0.0,
+  "fallback_rate": 0.0,
+  "accuracy": 0.09791667014360428,
+  "task_success": 0.09791667014360428,
+  "peak_gpu_memory_mb": 0.0,
+  "peak_host_memory_mb": 345.49609375,
+  "kv_cache_bytes": 0,
+  "prefill_ms": 0.0,
+  "decode_ms": 0.0,
+  "note_compile_ms": 0.0,
+  "total_task_ms": 0.0796718749976814,
+  "train_wall_s": 30.805814699997427,
+  "estimated_flops": 0,
+  "cost_usd": 0.0,
+  "extra": {
+    "accuracy_by_type": {
+      "direct": 0.11249999701976776,
+      "one_hop": 0.0625,
+      "two_hop": 0.11874999850988388
+    },
+    "best_val_accuracy": 0.18333333730697632,
+    "mean_active_tokens": 13.0,
+    "mean_lecture_tokens": 547.2875,
+    "token_exposure_100q": 1847.2875,
+    "query_conditioned_notes": true
+  }
+}

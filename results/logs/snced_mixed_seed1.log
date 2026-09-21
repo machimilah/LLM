@@ -1,0 +1,29 @@
+seed=1 stage A: note compiler
+  compiler step=200 loss=0.0771 val_extraction=0.9949
+seed=1 stage B: decoder on detailed + note memory
+  decoder step=250 loss=2.6462 val_gold_notes=0.5083 val_detailed=1.0000
+  decoder step=500 loss=0.4058 val_gold_notes=1.0000 val_detailed=1.0000
+seed=1 filler=18 T=548 extraction=0.9960
+  ced_baseline      acc=1.0000 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 1.0} slots=547.8 fallback=0.000 GFLOPs/lecture=0.491 decode_ms/q=2.161
+  snced_detailed    acc=0.9992 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 0.9975} slots=547.8 fallback=0.000 GFLOPs/lecture=0.491 decode_ms/q=2.026
+  snced_notes       acc=0.9858 {'direct': 0.995, 'one_hop': 0.99, 'two_hop': 0.9725} slots=24.0 fallback=0.000 GFLOPs/lecture=0.279 decode_ms/q=1.125
+  snced_gold_notes  acc=0.9933 {'direct': 0.9925, 'one_hop': 1.0, 'two_hop': 0.9875} slots=24.0 fallback=0.000 GFLOPs/lecture=0.279 decode_ms/q=1.134
+  snced_fallback    acc=0.9983 {'direct': 1.0, 'one_hop': 0.9975, 'two_hop': 0.9975} slots=422.0 fallback=0.760 GFLOPs/lecture=0.442 decode_ms/q=1.931
+seed=1 filler=54 T=939 extraction=0.9928
+  ced_baseline      acc=0.9983 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 0.995} slots=939.2 fallback=0.000 GFLOPs/lecture=0.851 decode_ms/q=2.481
+  snced_detailed    acc=0.9975 {'direct': 1.0, 'one_hop': 0.9975, 'two_hop': 0.995} slots=939.2 fallback=0.000 GFLOPs/lecture=0.851 decode_ms/q=2.362
+  snced_notes       acc=0.9667 {'direct': 0.9825, 'one_hop': 0.9725, 'two_hop': 0.945} slots=24.0 fallback=0.000 GFLOPs/lecture=0.480 decode_ms/q=1.098
+  snced_gold_notes  acc=0.9992 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 0.9975} slots=24.0 fallback=0.000 GFLOPs/lecture=0.480 decode_ms/q=1.079
+  snced_fallback    acc=0.9975 {'direct': 1.0, 'one_hop': 0.9975, 'two_hop': 0.995} slots=829.9 fallback=0.880 GFLOPs/lecture=0.809 decode_ms/q=2.514
+seed=1 filler=108 T=1529 extraction=0.9952
+  ced_baseline      acc=0.9942 {'direct': 1.0, 'one_hop': 0.9925, 'two_hop': 0.99} slots=1528.8 fallback=0.000 GFLOPs/lecture=1.543 decode_ms/q=3.713
+  snced_detailed    acc=0.9950 {'direct': 1.0, 'one_hop': 0.995, 'two_hop': 0.99} slots=1528.8 fallback=0.000 GFLOPs/lecture=1.543 decode_ms/q=3.570
+  snced_notes       acc=0.9583 {'direct': 0.9725, 'one_hop': 0.9625, 'two_hop': 0.94} slots=24.0 fallback=0.000 GFLOPs/lecture=0.931 decode_ms/q=1.047
+  snced_gold_notes  acc=0.9975 {'direct': 1.0, 'one_hop': 1.0, 'two_hop': 0.9925} slots=24.0 fallback=0.000 GFLOPs/lecture=0.931 decode_ms/q=1.024
+  snced_fallback    acc=0.9942 {'direct': 1.0, 'one_hop': 0.995, 'two_hop': 0.9875} slots=1371.3 fallback=0.895 GFLOPs/lecture=1.481 decode_ms/q=3.046
+seed=1 filler=216 T=2705 extraction=0.9970
+  ced_baseline      acc=0.9900 {'direct': 1.0, 'one_hop': 0.995, 'two_hop': 0.975} slots=2704.5 fallback=0.000 GFLOPs/lecture=3.453 decode_ms/q=4.733
+  snced_detailed    acc=0.9825 {'direct': 1.0, 'one_hop': 0.98, 'two_hop': 0.9675} slots=2704.5 fallback=0.000 GFLOPs/lecture=3.453 decode_ms/q=4.982
+  snced_notes       acc=0.9592 {'direct': 0.9875, 'one_hop': 0.955, 'two_hop': 0.935} slots=24.0 fallback=0.000 GFLOPs/lecture=2.361 decode_ms/q=1.127
+  snced_gold_notes  acc=0.9975 {'direct': 1.0, 'one_hop': 0.995, 'two_hop': 0.9975} slots=24.0 fallback=0.000 GFLOPs/lecture=2.361 decode_ms/q=1.144
+  snced_fallback    acc=0.9825 {'direct': 1.0, 'one_hop': 0.98, 'two_hop': 0.9675} slots=2436.8 fallback=0.900 GFLOPs/lecture=3.346 decode_ms/q=5.350
