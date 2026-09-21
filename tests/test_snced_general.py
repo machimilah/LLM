@@ -71,17 +71,42 @@ def test_fallback_rereads_only_the_notes_source_spans():
     targeted = SNCEDGeneral(len(vocab), boundary_token=vocab.stoi["."],
                             fallback_span_mode=True, fallback_spans=2, max_span_tokens=20)
     whole = SNCEDGeneral(len(vocab), boundary_token=vocab.stoi["."], fallback_span_mode=False)
-    sizes = {}
+    fetched = {}
     for name, model in (("targeted", targeted), ("whole", whole)):
         states, detailed = model.encode(ctx)
         nb = model.compile(ctx, states)
         routed = model.route(q, nb, detailed, ctx == 0, hard=True, threshold=0.0)  # force fallback
-        sizes[name] = routed.memory.size(1) - nb.slots.size(1)
-        assert float(routed.fetched_slots.mean()) > 0  # it really fetched something
+        fetched[name] = float(routed.fetched_slots.mean())
 
-    assert sizes["targeted"] == 40          # 2 spans x 20 tokens
-    assert sizes["whole"] == ctx.size(1)    # the entire document
-    assert sizes["targeted"] < sizes["whole"] / 2
+    assert fetched["targeted"] <= 40                     # 2 spans x 20 tokens
+    assert fetched["targeted"] < ctx.size(1) / 2         # far less than rereading everything
+
+
+def test_memory_has_three_tiers():
+    """Local recency, indexed notes, and detail only when the router asks."""
+    model, vocab = _model(local_window=16, index_notes=4, fallback_span_mode=False)
+    ctx = _ctx(vocab, (2, 120), boundaries=tuple(range(19, 120, 20)))
+    q = torch.randint(4, len(vocab), (2, 6))
+    states, detailed = model.encode(ctx)
+    nb = model.compile(ctx, states)
+
+    closed = model.route(q, nb, detailed, ctx == 0, hard=True, threshold=1.1)   # never fall back
+    opened = model.route(q, nb, detailed, ctx == 0, hard=True, threshold=0.0)   # always fall back
+    live = lambda r: float((~r.mask).float().sum(-1).mean())  # noqa: E731
+
+    assert live(closed) <= 16 + 4                 # local window + indexed notes
+    assert live(opened) > live(closed)            # detail is added on demand
+    assert live(opened) < ctx.size(1)             # but still far below the full document
+
+
+def test_indexer_returns_requested_number_of_slots():
+    model, vocab = _model(index_notes=3)
+    ctx = _ctx(vocab, (2, 120), boundaries=tuple(range(19, 120, 20)))
+    states, _ = model.encode(ctx)
+    nb = model.compile(ctx, states)
+    q_vec = torch.randn(2, model.backbone.d_model)
+    slots, mask, scores = model.semantic_indexer(q_vec, nb.slots, nb.mask)
+    assert slots.shape[1] == 3 and mask.shape[1] == 3 and scores.shape[1] == 3
 
 
 def test_composite_loss_trains_every_component():

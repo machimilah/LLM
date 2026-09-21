@@ -1,0 +1,32 @@
+{
+  "model": "snced",
+  "condition": "full_context",
+  "dataset": "synthetic_lecture_v1_filler216",
+  "seed": 3,
+  "run_id": "a59f99ae248b",
+  "timestamp": "2026-09-21T14:06:55",
+  "git_commit": "8881056-dirty",
+  "context_length": 2704,
+  "parameters": 0,
+  "training_tokens": 0,
+  "note_tokens": 0.0,
+  "note_count": 2704.575,
+  "fallback_rate": 0.0,
+  "accuracy": 0.8541666666666666,
+  "task_success": 0.8541666666666666,
+  "peak_gpu_memory_mb": 0.0,
+  "peak_host_memory_mb": 0.0,
+  "kv_cache_bytes": 4154227,
+  "prefill_ms": 18.938754166932387,
+  "decode_ms": 3.2002050002726414,
+  "note_compile_ms": 0.0,
+  "total_task_ms": 134.1461341767475,
+  "train_wall_s": 0.0,
+  "estimated_flops": 3453594491,
+  "cost_usd": 0.0,
+  "extra": {
+    "n_filler": 216,
+    "queries_per_task": 36,
+    "memory_slots": 2704.575
+  }
+}

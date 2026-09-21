@@ -99,6 +99,29 @@ Pointers are soft (attention over segment states) so gradients reach the compile
 recovers the note as text, which is what `OpenVocabNoteCompiler.readable` prints. Segmentation is
 by boundary token or fixed window, so the model does not assume sentence structure.
 
+## 3c. Components from the target diagram
+
+| Diagram box | Status |
+|---|---|
+| Semantic Note Compiler (anchor, micro-context, source pointer, confidence, time/order) | built (v2) |
+| Note Encoder | built |
+| Semantic Note Memory | built |
+| Memory Router, "cheapest sufficient memory" | built, learned, with an access price |
+| Local Memory (recent tokens) | built (`memory_tiers.LocalMemory`) |
+| Detailed Memory, compressed | built (`memory_tiers.CompressedDetailMemory`, stride pooling) |
+| Semantic Indexer / Detail Indexer | built (`memory_tiers.Indexer`, top-k retrieval) |
+| MoE feed-forward | built (`layers.MoEFeedForward`, top-k routed, load balanced) |
+| Sliding-window attention | built (`layers.sliding_window_mask`) |
+| Sparse attention | built (`layers.topk_sparse_mask`) |
+| Vision Encoder / Vision Embedding | NOT built - there is no image data or multimodal task here, so it would be untested code |
+| Engram | NOT built - no definition in the plan to implement against |
+| DSpark | NOT built - decoder output head is a plain projection |
+
+The memory-side boxes are wired into `SNCEDGeneral` and exercised by the test suite. MoE, sliding
+window and sparse attention exist and are tested as layers, but the trained models in
+`results/tables/` use dense attention and a dense feed-forward: they are scale infrastructure, and
+turning them on changes cost, not the memory behaviour being measured.
+
 ## 4. Known gaps
 
 - The synthetic vocabulary is word-level and closed, so surface confusability and exact quotations

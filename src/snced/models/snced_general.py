@@ -38,6 +38,7 @@ from torch import nn
 from torch.nn import functional as F
 
 from .ced import CEDBaseline
+from .memory_tiers import CompressedDetailMemory, Indexer, LocalMemory
 from .note_compiler import NoteFields, OpenVocabNoteCompiler, segment_by_token, segment_fixed
 from .note_memory import NoteEncoder
 from .sufficiency_router import SufficiencyRouter, access_cost
@@ -70,7 +71,8 @@ class SNCEDGeneral(nn.Module):
                  compiler_hidden: int = 128, context_heads: int = 2, note_hidden: int = 128,
                  router_hidden: int = 64, segmentation: str = "token", boundary_token: int | None = None,
                  window: int = 24, fallback_span_mode: bool = True, fallback_spans: int = 3,
-                 max_span_tokens: int = 24) -> None:
+                 max_span_tokens: int = 24, local_window: int = 64, detail_stride: int = 4,
+                 index_notes: int = 16, index_detail: int = 16, use_indexers: bool = True) -> None:
         super().__init__()
         self.backbone = CEDBaseline(vocab_size, d_model=d_model, n_heads=n_heads, n_enc=n_enc,
                                     n_dec=n_dec, d_ff=d_ff, conv_kernel=conv_kernel,
@@ -83,6 +85,13 @@ class SNCEDGeneral(nn.Module):
         # of the whole document (plan section 9: "recover exact source span").
         self.fallback_span_mode = fallback_span_mode
         self.fallback_spans, self.max_span_tokens = fallback_spans, max_span_tokens
+        # Memory tiers: recent tokens, notes, compressed detail.
+        self.local_memory = LocalMemory(local_window)
+        self.detail_memory = CompressedDetailMemory(d_model, detail_stride)
+        # Indexers keep decoder cost tied to k rather than to how much is remembered.
+        self.use_indexers = use_indexers
+        self.semantic_indexer = Indexer(d_model, index_notes)
+        self.detail_indexer = Indexer(d_model, index_detail)
 
     # ----- memory construction (query-independent) -------------------------
 
@@ -108,39 +117,58 @@ class SNCEDGeneral(nn.Module):
 
     def route(self, query: torch.Tensor, notebook: Notebook, detailed: torch.Tensor,
               detail_mask: torch.Tensor, hard: bool = False, threshold: float = 0.5) -> RoutedMemory:
-        """Notes by default; when they look thin, reread only the source spans behind
-        the notes this question needs - not the whole document.
+        """Assemble the cheapest sufficient memory for this query.
 
-        Every note carries the span it came from, so falling back costs a few
-        sentences instead of the entire context. `fallback_span_mode=False`
-        restores the old all-or-nothing behaviour for comparison.
+        Always: local memory (recent tokens) + the notes the semantic indexer
+        retrieves. Only when the router asks: detail, either the source spans
+        behind the relevant notes or indexed compressed detail. Every extra
+        slot is charged to the access cost, so widening the memory has to pay
+        for itself in task loss.
         """
         q_states = self.backbone.tok(query)
         q_mask = query != self.backbone.tok.padding_idx
+        q_vec = (q_states * q_mask.unsqueeze(-1)).sum(1) / q_mask.sum(1, keepdim=True).clamp(min=1)
         p_detail = self.router(q_states, q_mask, notebook.slots, notebook.mask,
                                notebook.fields.confidence)
         gate = (p_detail > threshold).float() if hard else p_detail
 
-        if not self.fallback_span_mode:
-            memory = torch.cat([notebook.slots, detailed * gate.view(-1, 1, 1)], dim=1)
-            mask = torch.cat([notebook.mask, detail_mask | (gate < 1e-6).view(-1, 1)], dim=1)
-            return RoutedMemory(memory, mask, p_detail,
-                                (~detail_mask).float().sum(-1) * gate)
+        local, local_mask = self.local_memory(detailed, detail_mask)
+        if self.use_indexers:
+            notes, notes_mask, _ = self.semantic_indexer(q_vec, notebook.slots, notebook.mask)
+        else:
+            notes, notes_mask = notebook.slots, notebook.mask
 
+        parts, masks = [local, notes], [local_mask, notes_mask]
+        if self.fallback_span_mode:
+            extra, extra_mask, fetched = self._source_spans(q_states, q_mask, notebook, detailed)
+        else:
+            compressed, compressed_mask = self.detail_memory(detailed, detail_mask)
+            extra, extra_mask, _ = self.detail_indexer(q_vec, compressed, compressed_mask)
+            fetched = (~extra_mask).float().sum(-1)
+        parts.append(extra * gate.view(-1, 1, 1))
+        masks.append(extra_mask | (gate < 1e-6).view(-1, 1))
+
+        memory = torch.cat(parts, dim=1)
+        mask = torch.cat(masks, dim=1)
+        return RoutedMemory(memory, mask, p_detail, fetched * gate)
+
+    def _source_spans(self, q_states: torch.Tensor, q_mask: torch.Tensor, notebook: Notebook,
+                      detailed: torch.Tensor):
+        """Reread only the source spans behind the notes this query needs."""
         relevance = self.router.note_relevance(q_states, q_mask, notebook.slots, notebook.mask)
         k = min(self.fallback_spans, relevance.size(1))
-        chosen = relevance.topk(k, dim=1).indices  # (B, k) notes to reread
+        chosen = relevance.topk(k, dim=1).indices
         starts = notebook.fields.source.gather(1, chosen).long()
         ends = notebook.fields.source_end.gather(1, chosen).long()
-
-        B, width = query.size(0), self.max_span_tokens * k
+        B, width = q_states.size(0), self.max_span_tokens * k
         spans = detailed.new_zeros(B, width, detailed.size(-1))
         span_mask = torch.ones(B, width, dtype=torch.bool, device=detailed.device)
         fetched = torch.zeros(B, device=detailed.device)
         for b in range(B):
             pos = 0
             for j in range(k):
-                a, e = int(starts[b, j]), min(int(ends[b, j]), int(starts[b, j]) + self.max_span_tokens)
+                a = int(starts[b, j])
+                e = min(int(ends[b, j]), a + self.max_span_tokens)
                 n = max(0, min(e - a, width - pos))
                 if n <= 0:
                     continue
@@ -148,10 +176,7 @@ class SNCEDGeneral(nn.Module):
                 span_mask[b, pos : pos + n] = False
                 pos += n
             fetched[b] = pos
-        # Gate the retrieved spans so the router's decision stays differentiable.
-        memory = torch.cat([notebook.slots, spans * gate.view(-1, 1, 1)], dim=1)
-        mask = torch.cat([notebook.mask, span_mask | (gate < 1e-6).view(-1, 1)], dim=1)
-        return RoutedMemory(memory, mask, p_detail, fetched * gate)
+        return spans, span_mask, fetched
 
     def decode(self, memory: torch.Tensor, mask: torch.Tensor, seq: torch.Tensor) -> torch.Tensor:
         return self.backbone.decode_all(memory, mask, seq)
