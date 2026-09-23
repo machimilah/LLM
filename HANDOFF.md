@@ -629,3 +629,243 @@ worth remembering. That argues for shipping the runtime early, for the data as m
 4. Run `python -m pytest -q` (39 tests, ~10 s) to confirm the environment.
 5. Run `python experiments/synthetic/scaling_benchmark.py` to reproduce the headline table.
 6. The open problem is `experiments/real/span_compiler.py` and its 0.86 ceiling. Start at Part 7.3.
+
+---
+
+# Part 10 — Appendices: the details that reproduce the work
+
+## A. The synthetic benchmark, exactly
+
+Defined in `src/snced/data.py`. Reconstructed from the plan's description because the original
+prototype scripts were not in the folder.
+
+**A document ("lecture")** has 42 chunks in shuffled order:
+
+- 12 **value facts**, one per entity: *"the lecture explains that e17 has value v4 and this detail
+  is relevant to the topic ."* — 4 template variants
+- 12 **link facts**, one per entity: *"in the framework e17 connects to e3 and this relation
+  matters later ."* — 4 template variants
+- 18 **filler** sentences — 10 variants, some mentioning entities or the words "value" and
+  "connects", so chunk type cannot be read off surface keywords
+
+Entity pool `e0..e23` (12 sampled per document), values `v0..v7` (chance = 12.5%), vocabulary of
+156 word-level tokens, no UNK. Lecture length ~547 tokens at 18 filler; the length sweep uses 54,
+108 and 216 filler (939 / 1,528 / 2,705 tokens).
+
+**Three question types**, all answered by a single value token:
+
+- direct: *"what is the value of e5 ?"*
+- one-hop: *"what is the value of the entity that e5 connects to ?"*
+- two-hop: *"... reached from e5 after two connections ?"*
+
+**Adversarial variants** (`src/snced/adversarial.py`): `temporal_update` restates an entity's value
+later so the last statement wins; `exact_value` makes answers two tokens ("v3 v7"), which a
+three-token note cannot hold. Both use only in-vocabulary text, so results measure memory rather
+than unknown-token handling.
+
+## B. Historical experiments reproduced (P1)
+
+`results/tables/reproduction.md`, 3 seeds each (123/456/789 and 11/22/33).
+
+**Experiment A — representation and fallback ablation.** The same 42k-parameter GRU reasoner is
+trained on every memory condition; memory is assembled per question (query-conditioned, which is
+why this tests the representation rather than autonomous compilation):
+
+| Condition | Accuracy (rebuilt) | Plan | Active tokens/q | Fallback |
+|---|---:|---:|---:|---:|
+| iterative RAG | 100.00 ± 0.00% | 100.00% | 40.23 | — |
+| SNM | 100.00 ± 0.00% | 100.00% | 17.00 | — |
+| SNM, 20% of notes damaged | 80.76 ± 2.21% | 82.22% | 16.58 | — |
+| SNM + selective fallback | 100.00 ± 0.00% | 100.00% | 19.53 | 21.0% |
+| word only (anchors, no context) | 11.74 ± 1.68% | 12.15% | 13.00 | — |
+
+**Experiment B — learned query-independent compiler.** A 22,823-parameter causal GRU (the plan
+reports 22,923) reads every chunk before any question exists:
+
+| Metric | Rebuilt | Plan |
+|---|---:|---:|
+| Raw lecture tokens | 546.97 | 573.44 |
+| Note tokens | 72.00 | 71.98 |
+| Text reduction | 86.84% | 87.45% |
+| Memory-slot reduction | 42.86% | 42.87% |
+| Information recovery (direct / 1-hop / 2-hop) | 100 / 100 / 100% | 100 / 99.79 / 100% |
+
+The reader is deterministic graph traversal over predicted notes, **not** an LLM decoder — the same
+limitation the plan flags in section 11.2.
+
+## C. BABILong five-arm comparison
+
+`results/tables/real_text_compiler.md`. Qwen2.5-0.5B-Instruct answers every arm; 25 questions per
+cell, ±~19pp at 95% confidence:
+
+| Memory | qa1 | qa2 | Prompt tokens | Memory build |
+|---|---:|---:|---:|---:|
+| Full context | 48.0% | 36.0% | 710 | — |
+| RAG top-k (query-conditioned) | 48.0% | 16.0% | 268 | — |
+| LLM-generated summary | 20.0% | 16.0% | 153 | 16–18 s |
+| LLM-prompted notes | 36.0% | 4.0% | 96 | 7–11 s |
+| **Trained compiler notes** | **52.0%** | **32.0%** | **96** | **0.16–0.18 s** |
+
+Three things this shows: a **trained** compiler beats a **prompted** LLM compiler decisively
+(52 vs 36, and 32 vs 4) at the same prompt size and ~50x faster memory building; notes match or
+beat full context on qa1 with 7.4x fewer prompt tokens; and the QA model is the bottleneck, since
+the same notes answer 88–90% under a deterministic reader.
+
+**Caveats recorded with that table:** qa9 is omitted because the model answers in sentences rather
+than yes/no, making word-containment scoring unreliable in both directions. Both LLM-memory arms
+were given a task-aware prompt hint (that the text hides short statements about people and places)
+after a generic prompt made the 0.5B summarise the literary filler instead. The hint was applied
+equally to the summary and prompted-notes arms and is a deviation from zero-shot use.
+
+## D. Sparsity investigation, in full
+
+The compression penalty has been through three designs:
+
+1. **Sigmoid gates, penalty on gate magnitude** — gamed. Every gate settled at 0.435–0.442 (spread
+   0.007) while the note encoder scaled its outputs up to compensate. The reported "18.5 notes" was
+   really 42 x 0.44; hard pruning at any threshold up to 0.3 removed nothing.
+2. **L0 hard-concrete gates, penalty on P(gate > 0)** — honest, but gates saturated at exactly 1.0
+   during the penalty warm-up, where the sigmoid gradient vanishes. Sweeping lambda to 4 and 16
+   pruned nothing: both finished at 100% accuracy keeping all 30 notes.
+3. **L0 with the logit clamped to ±4** — gradients survive. A 3,000-step run pruned 30 → 23.9 notes
+   (the fast config has exactly 24 fact sentences and 6 filler), but had not finished the curriculum
+   and sat at 81.7%. Given 8,000 steps it reached 100% on all paths and re-opened to 29.9 notes.
+
+**Current state:** sparsity works mechanically; on this task the optimum keeps every note at
+lambda <= 16 once the task is solved, because the penalty (~0.28 at lambda=4) is cheaper than any
+accuracy risk. Drawing the real quality-vs-compression curve needs a lambda sweep run **to
+convergence** at each point — that is the missing Plot F for v2.
+
+## E. Performance engineering findings
+
+- `SNCED.compile` originally indexed head tensors chunk by chunk: roughly 0.9 ms of dispatch
+  overhead per chunk, about 1.9 s per 48-document batch. Moving every head to Python lists in one
+  pass fixed it. Steady-state breakdown per document afterwards: encoder 2.33 ms, compile 2.96 ms
+  (of which chunk-span packing is 2.04 ms), note memory 0.02 ms.
+- CPU timings are comparable only when one condition runs at a time on an idle machine; earlier
+  numbers taken under contention included a 23.7-second outlier.
+
+## F. Exact commands
+
+```bash
+# Historical reproduction (P1)
+python experiments/synthetic/learned_compiler.py            # seeds 11 22 33
+python experiments/synthetic/ablation.py                    # seeds 123 456 789
+python experiments/synthetic/report.py                      # -> reproduction.md
+
+# CED baseline (P2). MUST reach >=95% before anything is compared against it
+python experiments/synthetic/end_to_end.py --config ced_baseline_gen.yaml --seeds 1 2 3
+
+# v1 decisive comparison, mixed-length compiler
+python experiments/synthetic/snced_compare.py --seeds 1 2 3 --tag mixed
+python experiments/synthetic/compare_report.py --experiment snced_compare_mixed --out snced_vs_ced_mixed
+
+# Memory-format ablations, router calibration, adversarial, timing, scaling
+python experiments/synthetic/ablations.py --seeds 1 2 3
+python experiments/synthetic/ablations_report.py
+python experiments/synthetic/router_calibration.py --seeds 1 2 3
+python experiments/synthetic/adversarial_eval.py --seeds 1 2 3
+python experiments/synthetic/timing_pass.py --seeds 1 2 3          # idle machine only
+python experiments/synthetic/scaling_benchmark.py --seeds 2 3 --fillers 18 54 108 216
+
+# v2 general architecture - the warm-start flags matter, see 3.4
+python experiments/synthetic/general_train.py --config snced_general.yaml --seeds 2 \
+    --init-backbone ced_baseline_seed{seed}.pt --freeze-encoder --decoder-frozen-steps 800
+python experiments/synthetic/general_report.py
+
+# Real text
+python experiments/real/train_note_compiler.py --train-docs 3000 --epochs 6   # closed vocabulary
+python experiments/real/span_compiler.py --train-docs 3000 --epochs 4         # open vocabulary
+SNCED_ENCODER=intfloat/e5-base-v2 python experiments/real/span_compiler.py --finetune-encoder
+python experiments/real/babilong_pilot.py --tasks qa1 qa2 --limit 25          # five-arm QA
+
+# On a GPU box / Kaggle
+python experiments/real/kaggle_stage0.py --stage compiler --session-hours 8 --resume
+python experiments/real/kaggle_stage0.py --stage qa --gate-only \
+    --model Qwen/Qwen2.5-7B-Instruct --bits 4
+```
+
+`scripts/run_all.sh` chains the CPU-runnable set in order.
+
+## G. Checkpoint inventory (`results/checkpoints/`, gitignored)
+
+| File | What it is |
+|---|---|
+| `ced_baseline_seed{1,2,3}.pt` | healthy CED baselines, 100% on all question types. **Seed 1 was destroyed by a smoke test and retrained** |
+| `snced_mixed_seed{1,2,3}.pt` | v1 SN-CED, mixed-length compiler — the checkpoints behind the headline v1 tables |
+| `snced_seed{2,3}.pt` | v1 SN-CED, fixed-length compiler (superseded) |
+| `snced_attempt2_seed1.pt` | v1 attempt 2, shared-encoder note memory — the 32% failure, kept for the record |
+| `snced_general_seed2.pt` | v2 general architecture |
+| `note_compiler_real_seed0.pt` | closed-vocabulary real-text compiler (88/90/92%) |
+| `span_compiler_seed0.pt` | open-vocabulary span tagger, frozen MiniLM |
+| `span_compiler_ft_seed0.pt` + `span_encoder_ft_seed0.pt` | span tagger with fine-tuned encoder (87 MB) |
+
+## H. External models and datasets used
+
+| Asset | Role |
+|---|---|
+| `Qwen/Qwen2.5-0.5B-Instruct`, `-1.5B-`, `-7B-` | QA models for the real-text pilots |
+| `sentence-transformers/all-MiniLM-L6-v2` (22M) | default compiler backbone |
+| `intfloat/e5-base-v2` (109M) | stronger backbone, selected via `SNCED_ENCODER` |
+| `microsoft/deberta-v3-base` | **untried** — needs `tiktoken` / sentencepiece installed |
+| `RMT-team/babilong`, config `1k`, splits qa1..qa10 | real-text evaluation |
+| `Muennighoff/babi` | bAbI training stories (tasks 1, 2, 9) |
+| `Salesforce/wikitext`, `wikitext-103-raw-v1` | training noise, and source of the mined entity vocabulary |
+| `pg19` | **not loadable** — script-based dataset, removed from `datasets` |
+
+## I. Real-text data pipeline
+
+`experiments/real/notes_data.py` and `span_data.py`:
+
+1. bAbI stories provide the relational structure (five relations: move, take, drop, state_in,
+   state_not_in). Templates are parsed with closed-vocabulary regexes to produce **gold labels
+   only**; the compiler itself learns open-vocabulary extraction.
+2. Entities are substituted from a vocabulary **mined from WikiText** (2,626 names / 4,723 nouns),
+   split into disjoint train and eval halves, with 15% of documents keeping the original cast. This
+   replaced fixed 40–70 word pools, which the tagger simply memorised.
+3. Fact sentences are interleaved into WikiText prose, and 30% of the time glued onto a neighbouring
+   sentence, because BABILong does the same.
+4. Evaluation uses real BABILong documents, optionally renamed with the held-out vocabulary half.
+
+The **deterministic reader** (`answer_from_notes`) replays notes in order — locations, holders,
+dropped objects, negations — and answers with no LLM, so retention measures the notebook rather than
+a reader. Gold notes score 100% on all three tasks, which is what makes it a valid ceiling.
+
+## J. Test coverage (39 tests)
+
+| File | What it protects |
+|---|---|
+| `test_data.py` | lecture structure (42 chunks, 12/12/18), required chunks support the answer, no UNK |
+| `test_notes.py` | note text and fields round-trip, notebook traversal, missing-note behaviour |
+| `test_router.py`, `test_router_policies.py` | sufficiency rules; per-question confidence uses only the notes a question needs; a missing chain forces fallback |
+| `test_fallback.py` | source-store accounting; fallback restores the answer exactly when corrupted; word-only hides the answer |
+| `test_compiler.py` | v1 compiler shapes, loss, query-independence |
+| `test_ced.py` | encoder causality, right-padding invariance, generative decoding shapes |
+| `test_snced_general.py` | segmentation modes, query-independent compilation, pointers resolve to real document tokens, router probability bounds, **targeted reread costs <=40 tokens not 120**, three memory tiers, indexer top-k, composite loss reaches all four learned components, L0 gate cannot be gamed, compression ramp schedule |
+| `test_adversarial.py` | variants stay in vocabulary, temporal answer is the later value, exact_value needs two tokens |
+| `test_layers.py` | MoE routes to k of n experts and balances load, sliding window forgets, top-k sparse keeps k keys |
+| `test_training_utils.py` | checkpoint round-trip restores weights/optimizer/step/RNG, atomic save, session budget |
+
+## K. Figures
+
+`results/figures/`: Plot A (quality vs active memory), Plot C (quality vs context length) for both
+the fixed- and mixed-length compilers, Plot F (compression vs quality across all ten memory
+formats), plus `*_attempt2.png` from the superseded shared-encoder run.
+
+## L. Configuration files
+
+| Config | Drives |
+|---|---|
+| `synthetic_small.yaml` | the two historical experiments |
+| `ced_baseline.yaml` | P2 baseline, classification decoder (superseded) |
+| `ced_baseline_gen.yaml` | **P2 baseline in use** — generative chain decoder, conv kernel 6 |
+| `snced.yaml` | v1 comparison: compiler gate 0.99, decoder gate 0.97, router policy `question` at t=0.5, eval at 18/54/108/216 filler |
+| `snced_general.yaml` | v2 full length |
+| `snced_general_fast.yaml` | v2 quick signal (6 filler, 30 eval documents) |
+| `ablations.yaml` | 72-token budget, RAG top-k 6, iterative RAG 3 rounds |
+| `tmp_lambda{4,16}.yaml` | leftovers from the sparsity sweep; safe to delete |
+
+## M. Hardware these results came from
+
+Windows 11, 16 CPU threads, 15.2 GB RAM, **no GPU**. Kaggle T4 (16 GB) for the two GPU runs. That
+is why model sizes are what they are, and why some measurements carry contention caveats.
