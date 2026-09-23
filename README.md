@@ -50,8 +50,13 @@ All scripts are CPU-only and use repository-relative paths.
 | General architecture v2 | notes 100% = full context 100% on 7.1% of the memory, no gold note labels anywhere. L0 gates, learned router, targeted span reread. See results/tables/snced_general.md |
 | P8+ real benchmarks | blocked: needs a 7B+ QA model and a GPU (the 0.5B/1.5B QA baseline is too weak) |
 
+> **Continuing this project on another machine? Start with [HANDOFF.md](HANDOFF.md)** - the full
+> state of the work: the idea, the architecture, every result, every failure and its diagnosis,
+> infrastructure access, and the next experiment.
+
 ## Documentation
 
+- [HANDOFF.md](HANDOFF.md) - complete project state, written for a cold start
 - [docs/architecture.md](docs/architecture.md) - what is built and why, with the cost of each decision
 - [docs/gpu_runbook.md](docs/gpu_runbook.md) - the order to run things on rented GPUs, with gates and costs
 - [scripts/run_all.sh](scripts/run_all.sh) - reproduce every CPU result
