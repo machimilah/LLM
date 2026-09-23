@@ -1,2 +1,13 @@
 
 === seed 7, engram=False
+step=250 stage=0 loss=2.0769 acc=0.1158 {'direct': 0.1375, 'one_hop': 0.09, 'two_hop': 0.12}
+step=500 stage=0 loss=1.7549 acc=0.2417 {'direct': 0.28, 'one_hop': 0.2375, 'two_hop': 0.2075}
+step=750 stage=0 loss=1.7690 acc=0.2350 {'direct': 0.2775, 'one_hop': 0.2125, 'two_hop': 0.215}
+step=1000 stage=0 loss=1.7512 acc=0.2075 {'direct': 0.265, 'one_hop': 0.17, 'two_hop': 0.1875}
+step=1102 advance to stage 1: [0, [0, 1]]
+step=1250 stage=1 loss=1.0689 acc=0.4675 {'direct': 1.0, 'one_hop': 0.1975, 'two_hop': 0.205}
+step=1500 stage=1 loss=1.0275 acc=0.4592 {'direct': 1.0, 'one_hop': 0.1775, 'two_hop': 0.2}
+step=1750 stage=1 loss=0.9753 acc=0.4375 {'direct': 1.0, 'one_hop': 0.1525, 'two_hop': 0.16}
+step=2000 stage=1 loss=0.9435 acc=0.4583 {'direct': 1.0, 'one_hop': 0.195, 'two_hop': 0.18}
+step=2250 stage=1 loss=0.9164 acc=0.4617 {'direct': 1.0, 'one_hop': 0.21, 'two_hop': 0.175}
+step=2500 stage=1 loss=0.8904 acc=0.4692 {'direct': 1.0, 'one_hop': 0.235, 'two_hop': 0.1725}

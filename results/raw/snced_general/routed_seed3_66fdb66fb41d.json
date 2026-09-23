@@ -1,0 +1,105 @@
+{
+  "model": "snced_general",
+  "condition": "routed",
+  "dataset": "synthetic_lecture_v1",
+  "seed": 3,
+  "run_id": "66fdb66fb41d",
+  "timestamp": "2026-09-23T15:46:34",
+  "git_commit": "5790df6-dirty",
+  "context_length": 425,
+  "parameters": 327524,
+  "training_tokens": 0,
+  "note_tokens": 0.0,
+  "note_count": 30.0,
+  "fallback_rate": 0.0,
+  "accuracy": 0.5208333333333334,
+  "task_success": 0.5208333333333334,
+  "peak_gpu_memory_mb": 0.0,
+  "peak_host_memory_mb": 1594.30859375,
+  "kv_cache_bytes": 0,
+  "prefill_ms": 0.0,
+  "decode_ms": 0.0,
+  "note_compile_ms": 0.0,
+  "total_task_ms": 0.0,
+  "train_wall_s": 1967.0857563000172,
+  "estimated_flops": 0,
+  "cost_usd": 0.0,
+  "extra": {
+    "accuracy_by_type": {
+      "direct": 0.7291666666666666,
+      "one_hop": 0.4583333333333333,
+      "two_hop": 0.375
+    },
+    "memory_slots": 80.0,
+    "best_step": 1050,
+    "loss_weights": {
+      "route": 1.0,
+      "detail_task": 1.0,
+      "sufficiency": 0.5,
+      "notes": 0.5,
+      "detail": 0.05,
+      "notes_start_step": 500,
+      "notes_ramp_steps": 500,
+      "separation": 0.5
+    },
+    "note_labels": "none (learned)",
+    "router": "learned sufficiency",
+    "compiler": "open-vocabulary pointers",
+    "sample_notes": [
+      {
+        "anchor": "the",
+        "micro_context": "part part",
+        "source": 0,
+        "order": 0,
+        "confidence": 0.1503349244594574,
+        "gate": 1.0,
+        "supersedes": 0.2479206919670105
+      },
+      {
+        "anchor": "the",
+        "micro_context": "v7 v7",
+        "source": 13,
+        "order": 1,
+        "confidence": 0.05131196975708008,
+        "gate": 1.0,
+        "supersedes": 0.11037082225084305
+      },
+      {
+        "anchor": "the",
+        "micro_context": "v1 v1",
+        "source": 27,
+        "order": 2,
+        "confidence": 0.04601292312145233,
+        "gate": 1.0,
+        "supersedes": 0.10007965564727783
+      },
+      {
+        "anchor": "the",
+        "micro_context": "causal causal",
+        "source": 42,
+        "order": 3,
+        "confidence": 0.053901176899671555,
+        "gate": 1.0,
+        "supersedes": 0.08790581673383713
+      },
+      {
+        "anchor": "the",
+        "micro_context": "causal causal",
+        "source": 58,
+        "order": 4,
+        "confidence": 0.07769918441772461,
+        "gate": 1.0,
+        "supersedes": 0.08946608006954193
+      },
+      {
+        "anchor": "the",
+        "micro_context": "v4 v4",
+        "source": 74,
+        "order": 5,
+        "confidence": 0.07366003096103668,
+        "gate": 1.0,
+        "supersedes": 0.2061738818883896
+      }
+    ]
+  }
+}

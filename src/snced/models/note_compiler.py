@@ -98,7 +98,7 @@ def segment_fixed(ctx: torch.Tensor, window: int, pad_id: int = 0) -> list[list[
 
 class OpenVocabNoteCompiler(nn.Module):
     def __init__(self, d_model: int, d_hidden: int = 128, context_heads: int = 2,
-                 max_notes: int | None = None) -> None:
+                 max_notes: int | None = None, gate_init: float = 2.0) -> None:
         super().__init__()
         self.context_heads, self.max_notes = context_heads, max_notes
         self.seg_query = nn.Parameter(torch.randn(d_hidden) * 0.02)
@@ -108,6 +108,10 @@ class OpenVocabNoteCompiler(nn.Module):
         self.context_ptr = nn.Linear(d_hidden, context_heads)
         self.summary = nn.Sequential(nn.Linear(d_hidden, d_hidden), nn.GELU())
         self.importance = nn.Linear(d_hidden, 1)
+        # Open the gates at initialisation. Closed gates hand the notes path an
+        # empty memory, and that loss damages the shared decoder the moment it
+        # unfreezes - the detailed reference path fell from 100% to ~45%.
+        nn.init.constant_(self.importance.bias, gate_init)
         self.confidence = nn.Linear(d_hidden, 1)
         self.supersedes = nn.Linear(d_hidden, 1)
 

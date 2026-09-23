@@ -72,7 +72,8 @@ class SNCEDGeneral(nn.Module):
                  router_hidden: int = 64, segmentation: str = "token", boundary_token: int | None = None,
                  window: int = 24, fallback_span_mode: bool = True, fallback_spans: int = 3,
                  max_span_tokens: int = 24, local_window: int = 64, detail_stride: int = 4,
-                 index_notes: int = 16, index_detail: int = 16, use_indexers: bool = True) -> None:
+                 index_notes: int = 16, index_detail: int = 16, use_indexers: bool = True,
+                 note_dropout: float = 0.0) -> None:
         super().__init__()
         self.backbone = CEDBaseline(vocab_size, d_model=d_model, n_heads=n_heads, n_enc=n_enc,
                                     n_dec=n_dec, d_ff=d_ff, conv_kernel=conv_kernel,
@@ -90,6 +91,12 @@ class SNCEDGeneral(nn.Module):
         self.detail_memory = CompressedDetailMemory(d_model, detail_stride)
         # Indexers keep decoder cost tied to k rather than to how much is remembered.
         self.use_indexers = use_indexers
+        # Retrieval only pays off if a note means something on its own. Trained
+        # without this, the notebook becomes a distributed code: accuracy falls
+        # roughly in proportion to how many notes are dropped, so the indexer
+        # cannot keep a subset without losing the answer. Randomly hiding notes
+        # during training forces the answer into individual slots.
+        self.note_dropout = note_dropout
         self.semantic_indexer = Indexer(d_model, index_notes)
         self.detail_indexer = Indexer(d_model, index_detail)
 
@@ -216,6 +223,20 @@ class SNCEDGeneral(nn.Module):
         notes_logits = self.decode(notebook.slots[rows], notebook.mask[rows], seq)
         l_notes = F.cross_entropy(notes_logits.flatten(0, 1), target.flatten(), ignore_index=-100)
 
+        # Same notebook, a random subset of its notes hidden. This is the term
+        # that makes retrieval possible at all: it prices holding the answer
+        # across the whole notebook rather than in the notes about it.
+        l_dropped = notes_logits.new_zeros(())
+        if self.training and self.note_dropout > 0:
+            keep = torch.rand_like(notebook.mask[rows], dtype=notes_logits.dtype) >= self.note_dropout
+            dropped_mask = notebook.mask[rows] | ~keep
+            # Never hand the decoder an empty notebook - the loss there is noise.
+            empty = dropped_mask.all(1)
+            dropped_mask[empty] = notebook.mask[rows][empty]
+            dropped_logits = self.decode(notebook.slots[rows], dropped_mask, seq)
+            l_dropped = F.cross_entropy(dropped_logits.flatten(0, 1), target.flatten(),
+                                        ignore_index=-100)
+
         routed = self.route(seq, Notebook(notebook.slots[rows], notebook.mask[rows],
                                           _index_fields(notebook.fields, rows)),
                             detailed[rows], detail_mask[rows])
@@ -239,6 +260,7 @@ class SNCEDGeneral(nn.Module):
         w_notes = self.compression_weight(weights, step)
 
         total = (l_notes
+                 + weights.get("note_dropout", 0.0) * l_dropped
                  + weights["route"] * l_routed
                  + weights.get("detail_task", 1.0) * l_detail_task
                  + weights["sufficiency"] * l_suff
@@ -246,6 +268,7 @@ class SNCEDGeneral(nn.Module):
                  + weights.get("separation", 0.0) * l_separation
                  + weights["detail"] * l_access)
         parts = {"task_notes": float(l_notes), "task_routed": float(l_routed),
+                 "task_dropped": float(l_dropped),
                  "task_detail": float(l_detail_task), "sufficiency": float(l_suff),
                  "note_count": float(notebook.fields.expected_notes.mean()), "access": float(l_access),
                  "p_detail": float(routed.p_detail.mean()), "note_slots": notebook.n_slots,

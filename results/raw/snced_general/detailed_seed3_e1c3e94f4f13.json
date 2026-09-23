@@ -1,0 +1,105 @@
+{
+  "model": "snced_general",
+  "condition": "detailed",
+  "dataset": "synthetic_lecture_v1",
+  "seed": 3,
+  "run_id": "e1c3e94f4f13",
+  "timestamp": "2026-09-23T15:12:22",
+  "git_commit": "5790df6-dirty",
+  "context_length": 425,
+  "parameters": 327524,
+  "training_tokens": 0,
+  "note_tokens": 0.0,
+  "note_count": 30.0,
+  "fallback_rate": 0.0,
+  "accuracy": 0.4583333333333333,
+  "task_success": 0.4583333333333333,
+  "peak_gpu_memory_mb": 0.0,
+  "peak_host_memory_mb": 589.71484375,
+  "kv_cache_bytes": 0,
+  "prefill_ms": 0.0,
+  "decode_ms": 0.0,
+  "note_compile_ms": 0.0,
+  "total_task_ms": 0.0,
+  "train_wall_s": 843.6007874999777,
+  "estimated_flops": 0,
+  "cost_usd": 0.0,
+  "extra": {
+    "accuracy_by_type": {
+      "direct": 1.0,
+      "one_hop": 0.1875,
+      "two_hop": 0.1875
+    },
+    "memory_slots": 415.8333333333333,
+    "best_step": 1400,
+    "loss_weights": {
+      "route": 1.0,
+      "detail_task": 1.0,
+      "sufficiency": 0.5,
+      "notes": 0.5,
+      "detail": 0.05,
+      "notes_start_step": 500,
+      "notes_ramp_steps": 500,
+      "separation": 0.5
+    },
+    "note_labels": "none (learned)",
+    "router": "learned sufficiency",
+    "compiler": "open-vocabulary pointers",
+    "sample_notes": [
+      {
+        "anchor": "the",
+        "micro_context": "can can",
+        "source": 0,
+        "order": 0,
+        "confidence": 0.11066378653049469,
+        "gate": 1.0,
+        "supersedes": 0.2501785457134247
+      },
+      {
+        "anchor": "which",
+        "micro_context": "v7 v7",
+        "source": 13,
+        "order": 1,
+        "confidence": 0.037154898047447205,
+        "gate": 1.0,
+        "supersedes": 0.13547474145889282
+      },
+      {
+        "anchor": ".",
+        "micro_context": "v1 v1",
+        "source": 27,
+        "order": 2,
+        "confidence": 0.031137943267822266,
+        "gate": 1.0,
+        "supersedes": 0.12171240895986557
+      },
+      {
+        "anchor": "slide",
+        "micro_context": "on e23",
+        "source": 42,
+        "order": 3,
+        "confidence": 0.01911761611700058,
+        "gate": 1.0,
+        "supersedes": 0.0848487988114357
+      },
+      {
+        "anchor": "noted",
+        "micro_context": "e14 e14",
+        "source": 58,
+        "order": 4,
+        "confidence": 0.06582316011190414,
+        "gate": 1.0,
+        "supersedes": 0.143125981092453
+      },
+      {
+        "anchor": "which",
+        "micro_context": "v4 v4",
+        "source": 74,
+        "order": 5,
+        "confidence": 0.06196916475892067,
+        "gate": 1.0,
+        "supersedes": 0.2283104956150055
+      }
+    ]
+  }
+}

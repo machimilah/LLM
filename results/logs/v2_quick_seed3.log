@@ -1,0 +1,14 @@
+device: cpu
+warm-started backbone from ced_baseline_seed3.pt (missing 0, unexpected 0)
+parameters: 166,536 (compiler 25,734, notes 99,008, router 20,866)
+step=150 stage=0 notes=0.104 routed=0.201 detailed=1.000 | slots=30.0 routed_slots=80.0 fired=0.00 | L_notes=3.551 suff=3.549 n_notes=29.9 overlap=0.053
+step=300 stage=0 notes=0.076 routed=0.188 detailed=1.000 | slots=30.0 routed_slots=80.0 fired=0.00 | L_notes=3.347 suff=3.345 n_notes=29.9 overlap=0.045
+step=301 decoder unfrozen
+step=450 stage=0 notes=0.139 routed=0.194 detailed=1.000 | slots=30.0 routed_slots=80.0 fired=0.00 | L_notes=2.645 suff=2.601 n_notes=29.9 overlap=0.003
+step=600 stage=0 notes=0.826 routed=0.215 detailed=0.993 | slots=30.0 routed_slots=80.0 fired=0.00 | L_notes=0.574 suff=0.547 n_notes=29.9 overlap=0.012
+step=750 stage=0 notes=0.931 routed=0.354 detailed=0.979 | slots=30.0 routed_slots=80.0 fired=0.00 | L_notes=0.303 suff=0.287 n_notes=29.9 overlap=0.003
+step=900 stage=0 notes=0.979 routed=0.396 detailed=0.993 | slots=30.0 routed_slots=80.0 fired=0.00 | L_notes=0.217 suff=0.204 n_notes=29.9 overlap=0.002
+step=1050 stage=0 notes=0.979 routed=0.521 detailed=1.000 | slots=30.0 routed_slots=80.0 fired=0.00 | L_notes=0.235 suff=0.256 n_notes=29.9 overlap=0.002
+step=1200 stage=0 notes=0.993 routed=0.500 detailed=0.993 | slots=30.0 routed_slots=80.0 fired=0.00 | L_notes=0.180 suff=0.191 n_notes=29.9 overlap=0.002
+sample notes: [{"anchor": "the", "micro_context": "part part", "source": 0, "order": 0, "confidence": 0.1503349244594574, "gate": 1.0, "supersedes": 0.2479206919670105}, {"anchor": "the", "micro_context": "v7 v7", "source": 13, "order": 1, "confidence": 0.05131196975708008, "gate": 1.0, "supersedes": 0.11037082225084305}, {"anchor": "the", "micro_context": "v1 v1", "source": 27, "order": 2, "confidence": 0.04601292312145233, "gate": 1.0, "supersedes": 0.10007965564727783}, {"anchor": "the", "micro_context": "causal causal", "source": 42, "order": 3, "confidence": 0.053901176899671555, "gate": 1.0, "supersedes": 0.08790581673383713}, {"anchor": "the", "micro_context": "causal causal", "source": 58, "order": 4, "confidence": 0.07769918441772461, "gate": 1.0, "supersedes": 0.08946608006954193}, {"anchor": "the", "micro_context": "v4 v4", "source": 74, "order": 5, "confidence": 0.07366003096103668, "gate": 1.0, "supersedes": 0.2061738818883896}]
+seed=3 FINAL notes=0.9792 routed=0.5208 detailed=1.0000 slots=30.0

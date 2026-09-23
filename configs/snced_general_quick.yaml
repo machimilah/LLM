@@ -1,0 +1,53 @@
+data:
+  n_entities: 12
+  n_filler: 6
+model:
+  d_model: 64
+  n_heads: 4
+  n_enc: 2
+  n_dec: 3
+  d_ff: 128
+  compiler_hidden: 128
+  context_heads: 2
+  note_hidden: 128
+  router_hidden: 64
+  segmentation: token
+  fallback_span_mode: true
+  fallback_spans: 3
+  max_span_tokens: 24
+  window: 24
+  conv_kernel: 6
+  generative: true
+  note_dropout: 0.4
+loss:
+  route: 1.0
+  note_dropout: 1.0
+  detail_task: 1.0
+  sufficiency: 0.5
+  notes: 0.5
+  detail: 0.05
+  notes_start_step: 500
+  notes_ramp_steps: 500
+  separation: 0.5
+train:
+  seeds:
+  - 1
+  lectures_per_batch: 12
+  lr: 0.001
+  warmup: 200
+  weight_decay: 0.01
+  grad_clip: 1.0
+  eval_every: 150
+  max_steps: 1200
+  advance_at: 0.95
+  advance_window: 50
+  final_stage_steps: 1200
+  curriculum:
+  - - 6
+    - - 0
+      - 1
+      - 2
+eval:
+  n_docs: 24
+  queries_per_type: 2
+  router_threshold: 0.5

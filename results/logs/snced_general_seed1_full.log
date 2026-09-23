@@ -1,0 +1,17 @@
+device: cpu
+warm-started backbone from ced_baseline_seed1.pt (missing 0, unexpected 0)
+parameters: 166,536 (compiler 25,734, notes 99,008, router 20,866)
+step=250 stage=0 notes=0.122 routed=0.219 detailed=1.000 | slots=42.0 routed_slots=118.9 fired=1.00 | L_notes=2.239 suff=2.238 n_notes=23.9 overlap=0.049
+step=500 stage=0 notes=0.100 routed=0.214 detailed=1.000 | slots=42.0 routed_slots=118.7 fired=1.00 | L_notes=2.308 suff=2.308 n_notes=23.9 overlap=0.031
+step=750 stage=0 notes=0.108 routed=0.197 detailed=1.000 | slots=42.0 routed_slots=118.4 fired=1.00 | L_notes=2.256 suff=2.255 n_notes=23.9 overlap=0.025
+step=801 decoder unfrozen
+step=1000 stage=0 notes=0.111 routed=0.197 detailed=0.694 | slots=42.0 routed_slots=118.1 fired=1.00 | L_notes=2.103 suff=2.085 n_notes=23.9 overlap=0.002
+step=1250 stage=0 notes=0.142 routed=0.203 detailed=0.531 | slots=42.0 routed_slots=118.1 fired=1.00 | L_notes=2.087 suff=2.076 n_notes=23.9 overlap=0.001
+step=1500 stage=0 notes=0.103 routed=0.203 detailed=0.531 | slots=42.0 routed_slots=119.0 fired=1.00 | L_notes=2.065 suff=2.054 n_notes=23.9 overlap=0.000
+step=1750 stage=0 notes=0.172 routed=0.194 detailed=0.453 | slots=42.0 routed_slots=118.4 fired=1.00 | L_notes=2.002 suff=1.998 n_notes=23.9 overlap=0.002
+step=2000 stage=0 notes=0.464 routed=0.406 detailed=0.447 | slots=42.0 routed_slots=84.5 fired=0.10 | L_notes=0.147 suff=0.145 n_notes=23.9 overlap=0.002
+step=2250 stage=0 notes=0.467 routed=0.364 detailed=0.425 | slots=42.0 routed_slots=89.3 fired=0.21 | L_notes=0.226 suff=0.226 n_notes=23.9 overlap=0.001
+step=2500 stage=0 notes=0.425 routed=0.356 detailed=0.417 | slots=42.0 routed_slots=88.3 fired=0.19 | L_notes=0.035 suff=0.034 n_notes=23.9 overlap=0.002
+step=2750 stage=0 notes=0.433 routed=0.347 detailed=0.431 | slots=42.0 routed_slots=80.0 fired=0.00 | L_notes=0.054 suff=0.053 n_notes=23.9 overlap=0.002
+step=3000 stage=0 notes=0.425 routed=0.317 detailed=0.414 | slots=42.0 routed_slots=80.0 fired=0.00 | L_notes=0.066 suff=0.068 n_notes=23.9 overlap=0.001
+step=3250 stage=0 notes=0.422 routed=0.383 detailed=0.431 | slots=42.0 routed_slots=80.0 fired=0.00 | L_notes=0.118 suff=0.118 n_notes=23.9 overlap=0.001
