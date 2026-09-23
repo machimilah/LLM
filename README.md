@@ -57,6 +57,7 @@ All scripts are CPU-only and use repository-relative paths.
 ## Documentation
 
 - [HANDOFF.md](HANDOFF.md) - complete project state, written for a cold start
+- [docs/target_architecture.md](docs/target_architecture.md) - the target design, every box with build status
 - [docs/architecture.md](docs/architecture.md) - what is built and why, with the cost of each decision
 - [docs/gpu_runbook.md](docs/gpu_runbook.md) - the order to run things on rented GPUs, with gates and costs
 - [scripts/run_all.sh](scripts/run_all.sh) - reproduce every CPU result

@@ -8,18 +8,15 @@ another person, with no context lost. Written to be read top to bottom.
 
 # Part 1 — What this project is
 
-## 1.1 The idea in plain words
+## 1.1 The idea in plain words (LLM wise, the architecture idea explained in simple terms of students) 
 
-A student who reads a lecture does not re-read the whole lecture before answering each exam
-question. They took notes, and they reason from the notes, returning to the source only when the
-notes are insufficient.
+A student who reads a lecture does not re-read the whole lecture before answering each exam question. They take notes, and they reason from the notes, returning to the source only when the notes are insufficient.
 
 Large language models do the opposite. Every question re-reads the entire context. Cost and memory
 grow with everything the model has ever seen, which is why long agent sessions get progressively
 more expensive and why context windows are rationed.
 
-SN-CED (Semantic Note Causal Encoder-Decoder) asks: after a model has understood some text, can it
-keep a small set of explicit notes and reason from those instead?
+SN-CED (Semantic Note Causal Encoder-Decoder) asks: after a model has understood some text, can it keep a super small set of explicit notes and reason from those instead?
 
 A note is:
 
@@ -58,6 +55,9 @@ work twice; see Part 5.
 # Part 2 — The architecture
 
 ## 2.1 The target design
+
+The canonical diagram, box by box with build status, is
+[docs/target_architecture.md](docs/target_architecture.md). Summary:
 
 ```
  document
