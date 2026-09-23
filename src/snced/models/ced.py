@@ -21,6 +21,7 @@ from torch import nn
 from torch.nn import functional as F
 
 from ..data import N_VALUES, PAD
+from .engram import EngramMemory
 
 
 def rope_tables(n: int, head_dim: int, device: torch.device, base: float = 10000.0):
@@ -102,6 +103,8 @@ class CEDBaseline(nn.Module):
         d_ff: int = 128,
         conv_kernel: int = 0,
         generative: bool = False,
+        engram: bool = False,
+        engram_table_size: int = 2 ** 16,
     ) -> None:
         super().__init__()
         self.d_model, self.n_dec, self.generative = d_model, n_dec, generative
@@ -109,6 +112,10 @@ class CEDBaseline(nn.Module):
         self.encoder = nn.ModuleList(
             Block(d_model, n_heads, d_ff, cross=False, conv_kernel=conv_kernel) for _ in range(n_enc)
         )
+        # Optional parametric n-gram memory, gated into the residual stream.
+        # Off by default: it is a performance component, and its value has to be
+        # shown by a matched ablation (experiments/synthetic/engram_ablation.py).
+        self.engram = EngramMemory(d_model, table_size=engram_table_size) if engram else None
         self.enc_norm = nn.LayerNorm(d_model)
         self.mem_proj = nn.Linear(d_model, d_model)
         self.decoder = nn.ModuleList(Block(d_model, n_heads, d_ff, cross=True) for _ in range(n_dec))
@@ -120,6 +127,8 @@ class CEDBaseline(nn.Module):
     def encode_states(self, ctx: torch.Tensor) -> torch.Tensor:
         """Final encoder hidden states (what the note compiler reads)."""
         h = self.tok(ctx)
+        if self.engram is not None:
+            h = self.engram(ctx, h)
         for blk in self.encoder:
             h = blk(h)
         return self.enc_norm(h)
@@ -128,11 +137,15 @@ class CEDBaseline(nn.Module):
         """Decoder memory projected from the final encoder states."""
         return self.mem_proj(self.encode_states(ctx))
 
-    def decode_all(self, memory: torch.Tensor, ctx_pad: torch.Tensor, seq: torch.Tensor) -> torch.Tensor:
+    def decode_states(self, memory: torch.Tensor, ctx_pad: torch.Tensor, seq: torch.Tensor) -> torch.Tensor:
+        """Final decoder hidden states, before the output head (used by DSpark)."""
         x = self.tok(seq)
         for blk in self.decoder:
             x = blk(x, memory, ~ctx_pad)
-        return self.head(self.dec_norm(x))
+        return self.dec_norm(x)
+
+    def decode_all(self, memory: torch.Tensor, ctx_pad: torch.Tensor, seq: torch.Tensor) -> torch.Tensor:
+        return self.head(self.decode_states(memory, ctx_pad, seq))
 
     def decode(self, memory: torch.Tensor, ctx_pad: torch.Tensor, q: torch.Tensor) -> torch.Tensor:
         logits = self.decode_all(memory, ctx_pad, q)

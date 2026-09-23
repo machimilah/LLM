@@ -181,6 +181,12 @@ class SNCEDGeneral(nn.Module):
     def decode(self, memory: torch.Tensor, mask: torch.Tensor, seq: torch.Tensor) -> torch.Tensor:
         return self.backbone.decode_all(memory, mask, seq)
 
+    def decode_all(self, memory: torch.Tensor, mask: torch.Tensor, seq: torch.Tensor) -> torch.Tensor:
+        return self.backbone.decode_all(memory, mask, seq)
+
+    def decode_states(self, memory: torch.Tensor, mask: torch.Tensor, seq: torch.Tensor) -> torch.Tensor:
+        return self.backbone.decode_states(memory, mask, seq)
+
     # ----- training --------------------------------------------------------
 
     @staticmethod
